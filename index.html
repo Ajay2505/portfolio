@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ajay Kumar</title>
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+   <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+   <!-- Font awesome Icons -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="./dist/output.css">
+   <link rel="stylesheet" href="index.css">
+</head>
+<!-- 1b1b32 0a0a32-->
+
+<body class="w-screen overflow-x-hidden">
+   <input class="hidden" checked type="radio" name="colorTheme" id="default">
+   <input class="hidden" type="radio" name="colorTheme" id="light">
+   <input class="hidden" type="radio" name="colorTheme" id="dark">
+   <input class="hidden" type="radio" name="colorTheme" id="blue">
+
+   <div class="pageContent scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
+      
+      
+      <nav class="navbar backdrop-blur	z-50 pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
+         <div class="logo cursor-pointer py-3 sm:py-6 px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
+            <h1 class="text-4xl sm:text-6xl leading-snug skew-x-[16deg]"><a href="#main">Ajay</a></h1>
+         </div>
+
+         <div class="hidden navLinks sm:flex flex-row gap-5">
+            <div class="relative themesDiv text-lg cursor-pointer hover:underline text-center">
+               <p class="themeIcon  hover:scale-110">Theme<i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></p>
+               <div class="themes bg-[#949494] rounded-md text-black hidden absolute right-1 flex-col">
+                  <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="default">
+                     Default 
+                     <span class="w-4 h-4 rounded-full bg-[#525251] my-auto ml-4">&nbsp;</span> 
+                  </label>
+                  <label class="light relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="light">
+                     Light
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span> 
+                  </label>
+                  <label class="dark relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="dark">
+                     Dark
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#353740]">&nbsp;</span> 
+                  </label>
+                  <label class="blue relative flex flex-row cursor-pointer px-4 py-1 rounded-md hover:bg-zinc-300" for="blue">
+                     Blue
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#1b1b32]">&nbsp;</span> 
+                  </label>
+               </div>
+            </div>
+            <a class="text-lg cursor-pointer duration-75 hover:underline hover:scale-110">
+               Work
+               <i class="fa-solid fa-laptop-code"></i>
+            </a>
+            <a href="#footer" class="hi text-lg cursor-pointer hover:underline hover:scale-110 mr-5">
+               Say Hi!
+               <i class="fa-solid fa-hand rotate-45"></i>
+            </a>
+         </div>
+
+         <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
+         <label for="navCheckBox" class="sm:hidden relative w-9 h-9 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white">
+            <span class="barsIcon w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
+         </label>
+      </nav>
+
+      <a href="#main" class="topIcon origin-right duration-1000 translate-x-36 bg-black shadow-[1px_3px_6px_3px_rgba(0,0,0,0.35)] text-white rounded-full text-2xl w-max py-3 px-5 h-max cursor-pointer fixed right-12 sm:right-20 bottom-16">
+         <!-- <span class="absolute w-0 opacity-0">Back to Top</span> -->
+         <i class="fa-solid fa-up-long"></i>
+      </a>
+
+      <br id="main"><br><br><br>
+
+      <main>
+         <section class="home w-screen h-full flex justify-center items-center">
+            <div class="grid grid-flow-row grid-cols-2 w-full">
+               <img class="inline-block rounded-full w-3/5 mx-auto m-7" src="./assets/images/_ea1a9d6c-2c44-491f-bfb7-b992b19844d9.jpg" alt="">
+               <div class="my-auto">
+                  <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal">Hello!</h1>
+                  <br>
+                  <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-7xl font-light">I'm <span class="text-blue-500 font-normal">Ajay</span>, a</h1>
+                  <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-7xl font-normal my-2">Web developer</h1>
+                  <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-7xl font-light">from <span class="font-normal">Hyderabad</span>.</h1>
+               </div>
+            </div>
+         </section>
+         <section class="w-screen h-screen"></section>
+      </main>
+
+      <footer id="footer" class="w-screen h-48 bg-[rgba(52,53,65)]">
+
+      </footer>
+   </div>
+
+   <script src="./index.js"></script>
+</body>
+
+</html>

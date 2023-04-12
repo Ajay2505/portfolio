@@ -1,0 +1,149 @@
+html {
+   font-family: 'Roboto', sans-serif;
+}
+
+.barsIcon::before, .barsIcon::after {
+   content: "";
+   position: absolute;
+   top: -.35rem;
+   left: 0;
+   transition: all .2s;
+   width: 1.25rem;
+   height: 2px;
+   display: inline-block;
+   background-color: #333;
+}
+
+.barsIcon::after {
+   top: .35rem;
+}
+
+.themesDiv:hover > p > i {
+   transform: rotate(0);
+   margin-left: 4px;
+}
+
+.themeIcon:hover + div.themes, .themes:hover {
+   display: flex;
+}
+
+.hi:hover > i {
+   animation: waveHand .9s ease-in-out infinite;
+}
+
+
+@keyframes waveHand {
+   0% {
+      rotate: 35deg;
+   }
+   50% {
+      rotate: -90deg;
+   }
+   100% {
+      rotate: 45deg;
+   }
+}
+
+/* Labels */
+#default:checked ~ div.pageContent label.default {
+   background-color: #000;
+   color: #fff;
+   font-weight: 600;
+}
+
+#light:checked ~ div.pageContent label.light {
+   background-color: #000;
+   color: #fff;
+   font-weight: 600;
+}
+
+#dark:checked ~ div.pageContent label.dark {
+   background-color: #000;
+   color: #fff;
+   font-weight: 600;
+}
+
+#blue:checked ~ div.pageContent label.blue {
+   background-color: #000;
+   color: #fff;
+   font-weight: 600;
+}
+
+/* section#skills:target ~ nav div.navLinks a.skillsLink {
+   color: red;
+} */
+
+/* 
+         Default  Light    Dark
+body-    #D7D6D6  #FFF     52,53,65
+navbar-  #525251  #F0F0F0
+navLogo- #A9A9A9  #CFCFCF
+*/
+
+/* .toTop {
+   transition: all 10s;
+}
+
+.toTop > span {
+   transform: scale(0);
+}
+
+.toTop:hover > span {
+   position: relative;
+   transition: all 5s;
+   opacity: 1;
+} */
+.showToTopIcon {
+   transform: translateX(0);
+}
+
+/* Default theme */
+.navbar {
+   background-image: linear-gradient(to right,rgba(53,55,64,0),#525251 58.85%);
+}
+
+/* Light theme */
+#light:checked ~ .pageContent {
+   background-color: #FFF;
+}
+
+#light:checked ~ div.pageContent > nav.navbar{
+   background-image: linear-gradient(to right, rgba(0,0,0,0.45) 15%, #F0F0F0 56%);
+   color: #000;
+}
+
+#light:checked ~ div.pageContent > nav.navbar div.logo{
+   background-color: #CFCFCF;
+   color: #000;
+}
+
+
+/* Dark theme */
+
+#dark:checked ~ .pageContent {
+   background-color: #444654;
+   color: #fff;
+}
+
+#dark:checked ~ div.pageContent > nav.navbar{
+   background-image: linear-gradient(to right,rgba(53,55,64,0),#353740 58.85%);
+}
+
+#dark:checked ~ div.pageContent > nav.navbar div.logo{
+   background-color: rgba(53,55,64);
+}
+
+/* Blue theme */
+
+#blue:checked ~ .pageContent{
+   background-color: #1b1b32;
+   color: white;
+}
+
+#blue:checked ~ div.pageContent > nav.navbar{
+   background-image: linear-gradient(to right,rgba(53,55,64,0.2),#0a0a32 58.85%);
+}
+
+#blue:checked ~ div.pageContent > nav.navbar div.logo{
+   background-color: #0a0a32;
+}
