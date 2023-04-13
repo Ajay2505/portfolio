@@ -21,7 +21,6 @@ html {
 #navCheckBox:checked ~ div.mobileNavbar {
    transform: translateY(0);
    opacity: 1;
-   backdrop-filter: blur(100px);
    /* background-image: linear-gradient(to right bottom, #2998ff, #5643fa); */
    background-image: linear-gradient(to left bottom, #525251, #F0F0F0);
 }
@@ -39,7 +38,6 @@ html {
    animation: waveHand .9s ease-in-out infinite;
 }
 
-
 @keyframes waveHand {
    0% {
       rotate: 35deg;
@@ -52,26 +50,56 @@ html {
    }
 }
 
+.animateFromLeft {
+   animation: fromLeft .9s ease-in-out;
+}
+
+.animateFromRight {
+   animation: fromRight .9s ease-in-out;
+}
+
+@keyframes fromLeft {
+   0% {
+      transform: translateX(-40rem);
+      opacity: .1;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes fromRight {
+   0% {
+      opacity: .1;
+      transform: translateX(20rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
 /* Labels */
-#default:checked ~ div.pageContent label.default {
+#default:checked ~ div#pageContent label.default {
    background-color: #000;
    color: #fff;
    font-weight: 600;
 }
 
-#light:checked ~ div.pageContent label.light {
+#light:checked ~ div#pageContent label.light {
    background-color: #000;
    color: #fff;
    font-weight: 600;
 }
 
-#dark:checked ~ div.pageContent label.dark {
+#dark:checked ~ div#pageContent label.dark {
    background-color: #000;
    color: #fff;
    font-weight: 600;
 }
 
-#blue:checked ~ div.pageContent label.blue {
+#blue:checked ~ div#pageContent label.blue {
    background-color: #000;
    color: #fff;
    font-weight: 600;
@@ -121,16 +149,16 @@ div.navLinks:hover a:not(:hover) {
 }
 
 /* Light theme */
-#light:checked ~ .pageContent {
+#light:checked ~ #pageContent {
    background-color: #FFF;
 }
 
-#light:checked ~ div.pageContent > nav.navbar{
+#light:checked ~ div#pageContent > nav.navbar{
    background-image: linear-gradient(to right, rgba(0,0,0,0.45) 15%, #F0F0F0 56%);
    color: #000;
 }
 
-#light:checked ~ div.pageContent > nav.navbar div.logo{
+#light:checked ~ div#pageContent > nav.navbar div.logo{
    background-color: #CFCFCF;
    color: #000;
 }
@@ -138,30 +166,30 @@ div.navLinks:hover a:not(:hover) {
 
 /* Dark theme */
 
-#dark:checked ~ .pageContent {
+#dark:checked ~ #pageContent {
    background-color: #444654;
    color: #fff;
 }
 
-#dark:checked ~ div.pageContent > nav.navbar{
+#dark:checked ~ div#pageContent > nav.navbar{
    background-image: linear-gradient(to right,rgba(53,55,64,0),#353740 58.85%);
 }
 
-#dark:checked ~ div.pageContent > nav.navbar div.logo{
+#dark:checked ~ div#pageContent > nav.navbar div.logo{
    background-color: rgba(53,55,64);
 }
 
 /* Blue theme */
 
-#blue:checked ~ .pageContent{
+#blue:checked ~ #pageContent{
    background-color: #1b1b32;
    color: white;
 }
 
-#blue:checked ~ div.pageContent > nav.navbar{
+#blue:checked ~ div#pageContent > nav.navbar{
    background-image: linear-gradient(to right,rgba(53,55,64,0.2),#0a0a32 58.85%);
 }
 
-#blue:checked ~ div.pageContent > nav.navbar div.logo{
+#blue:checked ~ div#pageContent > nav.navbar div.logo{
    background-color: #0a0a32;
 }

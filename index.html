@@ -16,13 +16,13 @@
 </head>
 <!-- 1b1b32 0a0a32-->
 
-<body class="w-screen overflow-x-hidden">
+<body class="w-screen overflow-hidden">
    <input class="hidden" checked type="radio" name="colorTheme" id="default">
    <input class="hidden" type="radio" name="colorTheme" id="light">
    <input class="hidden" type="radio" name="colorTheme" id="dark">
    <input class="hidden" type="radio" name="colorTheme" id="blue">
 
-   <div class="pageContent scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
+   <div id="pageContent" class="scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
       
       <nav class="navbar backdrop-blur	z-40 pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
          <div class="logo cursor-pointer py-3 sm:py-4 md:py-6 px-12 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
@@ -107,10 +107,10 @@
       <br id="main"><br><br><br>
 
       <main>
-         <section class="home w-screen h-full flex justify-center items-center">
-            <div class="grid grid-flow-row grid-cols-2 w-full">
-               <img class="inline-block rounded-full w-4/5 sm:w-3/5 mx-auto m-7" src="./assets/images/mainImg.jpg" alt="Main Image">
-               <div class="my-auto">
+         <section class="w-screen h-full flex justify-center items-center">
+            <div id="home" class="grid grid-flow-row grid-cols-2 w-full overflow-hidden">
+               <img class="inline-block animateFromLeft rounded-full w-4/5 sm:w-3/5 ml-auto m-7" src="./assets/images/mainImg.jpg" alt="Main Image">
+               <div class="my-auto animateFromRight">
                   <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal">Hello!</h1>
                   <br>
                   <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">I'm <span class="text-blue-500 font-normal selection:bg-black">Ajay</span>, a</h1>
@@ -119,7 +119,7 @@
                </div>
             </div>
          </section>
-         <section id="work" class="w-screen h-screen">
+         <section id="work" class="w-screen h-[150vh]">
             
          </section>
       </main>
