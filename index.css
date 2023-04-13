@@ -26,7 +26,7 @@ html {
    background-image: linear-gradient(to left bottom, #525251, #F0F0F0);
 }
 
-.themesDiv:hover > a > i {
+.themesDiv:hover > .themeIcon > i {
    transform: rotate(0);
    margin-left: 4px;
 }

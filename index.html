@@ -61,12 +61,12 @@
             </a>
          </div>
 
-         <input class="hidden" checked type="checkbox" name="checkbox" id="navCheckBox">
-         <label for="navCheckBox" class="sm:hidden navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
+         <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
+         <label for="navCheckBox" class="sm:hidden selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
             <span class="barsIcon w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
          </label>
 
-         <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-96 fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
+         <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
             <a href="#work" class="py-3 text-lg cursor-pointer duration-75 hover:underline hover:scale-110">
                Work
                <i class="fa-solid fa-laptop-code"></i>
@@ -77,8 +77,8 @@
             </a>
             <!-- <button class="text-white text-lg py-3">Theme</button> -->
             <div class="relative themesDiv text-lg cursor-pointer hover:underline text-center">
-               <a class="themeIcon py-2 hover:scale-110">Theme<i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></a>
-               <div class="themes bg-[#949494] rounded-md text-black hidden absolute right-1 flex-col">
+               <button class="themeIcon py-2 hover:scale-110">Theme<i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></button>
+               <div class="themes bg-[#949494] rounded-md text-black hidden absolute left-3 flex-col">
                   <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="default">
                      Default 
                      <span class="w-4 h-4 rounded-full bg-[#525251] my-auto ml-4">&nbsp;</span> 
@@ -109,7 +109,7 @@
       <main>
          <section class="home w-screen h-full flex justify-center items-center">
             <div class="grid grid-flow-row grid-cols-2 w-full">
-               <img class="inline-block rounded-full w-3/5 mx-auto m-7" src="./assets/images/mainImg.jpg" alt="Main Image">
+               <img class="inline-block rounded-full w-4/5 sm:w-3/5 mx-auto m-7" src="./assets/images/mainImg.jpg" alt="Main Image">
                <div class="my-auto">
                   <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal">Hello!</h1>
                   <br>

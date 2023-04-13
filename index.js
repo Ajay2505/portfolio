@@ -2,9 +2,10 @@ const body = document.querySelector(".pageContent");
 const navCheckBox = document.getElementById("navCheckBox");
 
 body.addEventListener("click", (evt) => {
-  if(evt.target.classList.contains("navCheckBoxLabel") || evt.target == navCheckBox || evt.target.classList.contains("themeIcon") || evt.target.classList.contains("fa-sort-down")) {
+  if(evt.target.classList.contains("navCheckBoxLabel") || evt.target == navCheckBox || evt.target.classList.contains("themeIcon") || evt.target.classList.contains("fa-sort-down") || evt.target.classList.contains("barsIcon")) {
     return;
   }
+  console.log(evt.target);
   navCheckBox.checked = false;
 })
 
