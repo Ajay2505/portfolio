@@ -2,7 +2,17 @@ html {
    font-family: 'Roboto', sans-serif;
 }
 
-.barsIcon::before, .barsIcon::after {
+section {
+   margin-bottom: 5rem;
+}
+
+a:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.barsIcon::before,
+.barsIcon::after {
    content: "";
    position: absolute;
    top: -.35rem;
@@ -18,22 +28,23 @@ html {
    top: .35rem;
 }
 
-#navCheckBox:checked ~ div.mobileNavbar {
+#navCheckBox:checked~div.mobileNavbar {
    transform: translateY(0);
    opacity: 1;
    background-image: linear-gradient(to left bottom, #525251, #F0F0F0);
 }
 
-.themesDiv:hover > .themeIcon > i {
+.themesDiv:hover>.themeIcon>i {
    transform: rotate(0);
    margin-left: 4px;
 }
 
-.themeIcon:hover + div.themes, .themes:hover {
+.themeIcon:hover+div.themes,
+.themes:hover {
    display: flex;
 }
 
-.hi:hover > i {
+.hi:hover>i {
    animation: waveHand .9s ease-in-out infinite;
 }
 
@@ -49,26 +60,34 @@ html {
    transform: translateX(0);
 }
 
+.bgImg {
+   background-image: linear-gradient(182deg, rgb(76 52 34 / 90%), rgb(49 36 25 / 20%)), url("https://wallpapercave.com/wp/LcLsWmw.jpg"), url("https://wallpapercave.com/wp/LcLsWmw.jpg");
+}
+
+.bgImg-2 {
+   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 133, 0.5)), url("https://free4kwallpapers.com/uploads/originals/2019/06/13/nature--wallpaper.jpg");
+}
+
 /* Labels */
-#default:checked ~ div#pageContent label.default {
+#default:checked~div#pageContent label.default {
    background-color: #000;
    color: #fff;
    font-weight: 600;
 }
 
-#light:checked ~ div#pageContent label.light {
+#light:checked~div#pageContent label.light {
    background-color: #000;
    color: #fff;
    font-weight: 600;
 }
 
-#dark:checked ~ div#pageContent label.dark {
+#dark:checked~div#pageContent label.dark {
    background-color: #000;
    color: #fff;
    font-weight: 600;
 }
 
-#blue:checked ~ div#pageContent label.blue {
+#blue:checked~div#pageContent label.blue {
    background-color: #000;
    color: #fff;
    font-weight: 600;
@@ -77,7 +96,7 @@ html {
 /* section#skills:target ~ nav div.navLinks a.skillsLink {
    color: red;
 } */
- /* 1b1b32 0a0a32 */
+/* 1b1b32 0a0a32 */
 /* #2998ff, #5643fa*/
 
 /* 
@@ -97,39 +116,40 @@ navLogo- #A9A9A9  #CFCFCF
 
 /* Default theme */
 .navbar {
-   background-image: linear-gradient(to right,rgba(53,55,64,0),#525251 58.85%);
+   background-image: linear-gradient(to right, rgba(53, 55, 64, 0), #525251 58.85%);
 }
 
 div.navLinks:hover a:not(:hover) {
    color: #7a7a7a;
 }
 
-#navCheckBox:checked + label > span {
+#navCheckBox:checked+label>span {
    background-color: transparent;
 }
 
-#navCheckBox:checked + label > span::before {
+#navCheckBox:checked+label>span::before {
    top: 0;
    transform: rotate(135deg);
    background: red;
 }
-#navCheckBox:checked + label > span::after {
+
+#navCheckBox:checked+label>span::after {
    top: 0;
    background: red;
    rotate: -135deg;
 }
 
 /* Light theme */
-#light:checked ~ #pageContent {
+#light:checked~#pageContent {
    background-color: #FFF;
 }
 
-#light:checked ~ div#pageContent > nav.navbar{
-   background-image: linear-gradient(to right, rgba(0,0,0,0.45) 15%, #F0F0F0 56%);
+#light:checked~div#pageContent>nav.navbar {
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.45) 15%, #F0F0F0 56%);
    color: #000;
 }
 
-#light:checked ~ div#pageContent > nav.navbar div.logo{
+#light:checked~div#pageContent>nav.navbar div.logo {
    background-color: #CFCFCF;
    color: #000;
 }
@@ -137,33 +157,33 @@ div.navLinks:hover a:not(:hover) {
 
 /* Dark theme */
 
-#dark:checked ~ #pageContent {
+#dark:checked~#pageContent {
    background-color: #444654;
    /* color: #000; */
    color: #fff;
 }
 
-#dark:checked ~ div#pageContent > nav.navbar{
-   background-image: linear-gradient(to right,rgba(53,55,64,0),#353740 58.85%);
+#dark:checked~div#pageContent>nav.navbar {
+   background-image: linear-gradient(to right, rgba(53, 55, 64, 0), #353740 58.85%);
 }
 
-#dark:checked ~ div#pageContent > nav.navbar div.logo{
-   background-color: rgba(53,55,64);
+#dark:checked~div#pageContent>nav.navbar div.logo {
+   background-color: rgba(53, 55, 64);
 }
 
 /* Blue theme */
 /* 645CBB 301E67  2155CD 1b1b32 4D77FF */
-#blue:checked ~ #pageContent{
+#blue:checked~#pageContent {
    background-color: #5a66cf;
    color: #000;
 }
 
-#blue:checked ~ div#pageContent > nav.navbar{
-   background-image: linear-gradient(to right,rgba(53,55,64,0.2),#0a0a32 58.85%);
+#blue:checked~div#pageContent>nav.navbar {
+   background-image: linear-gradient(to right, rgba(53, 55, 64, 0.2), #0a0a32 58.85%);
    color: #fff;
 }
 
-#blue:checked ~ div#pageContent > nav.navbar div.logo{
+#blue:checked~div#pageContent>nav.navbar div.logo {
    background-color: #0a0a32;
 }
 
@@ -176,9 +196,11 @@ div.navLinks:hover a:not(:hover) {
    0% {
       rotate: 35deg;
    }
+
    50% {
       rotate: -90deg;
    }
+
    100% {
       rotate: 45deg;
    }
@@ -189,6 +211,7 @@ div.navLinks:hover a:not(:hover) {
       transform: translateX(-40rem);
       opacity: .5;
    }
+
    100% {
       transform: translateX(0);
       opacity: 1;
@@ -200,6 +223,7 @@ div.navLinks:hover a:not(:hover) {
       opacity: .1;
       transform: translateX(20rem);
    }
+
    100% {
       opacity: 1;
       transform: translateX(0);

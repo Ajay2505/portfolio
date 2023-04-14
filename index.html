@@ -99,7 +99,7 @@
          </div>
       </nav>
       
-      <a href="#main" class="topIcon duration-700 bg-inherit shadow-[1px_2px_3px_1px_rgba(0,0,0,0.35)] hover:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)] text-inherit rounded-full text-2xl w-max py-3 px-5 h-max cursor-pointer fixed right-12 sm:right-20 bottom-16">
+      <a href="#main" class="topIcon duration-700 bg-inherit shadow-[1px_2px_3px_1px_rgba(0,0,0,0.35)] hover:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)] text-inherit rounded-full text-2xl w-max py-3 px-5 z-50 h-max cursor-pointer fixed right-12 sm:right-20 bottom-16">
          <i class="fa-solid fa-up-long"></i>
       </a>
 
@@ -118,13 +118,43 @@
                </div>
             </div>
          </section>
-         <section id="work" class="w-full h-[150vh]">
-            
+         <section id="work" class="flex w-full h-full justify-center flex-col items-center">
+            <div class="bgImg bg-center bg-cover bg-fixed bg-no-repeat flex justify-center mb-10 items-center w-full p-10 text-white">
+               <h1 class="text-3xl">Expertise in Web Development</h1>
+            </div>
+
+            <div class="grid animateFromLeft grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-14 gap-10 w-full h-full bg-inherit">
+               
+               <div class="flex flex-col duration-700 hover:-translate-y-4 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
+                  <i class="fa-regular fa-face-smile text-8xl text-yellow-500 w-fit mx-auto"></i>
+                  <h1 class="text-2xl text-black">User friendly</h1>
+                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur architecto possimus ex sed expedita totam sapiente!</p>
+               </div>
+               
+               <div class="flex flex-col duration-700 hover:-translate-y-5 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
+                  <img src="https://static.wixstatic.com/media/fb5049_5f8e26eb07394d5c8ba85b6ab2d7d674~mv2.png/v1/fill/w_1111,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Kia%20-%20Home%20NEW.png" alt="">
+                  <h1 class="text-2xl text-black">Responsive Design</h1>
+                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur architecto possimus ex sed expedita totam sapiente!</p>
+               </div>
+
+               <div class="flex flex-col duration-700 hover:-translate-y-5 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
+                  <i class="fa-solid fa-bolt text-8xl  text-yellow-500"></i>
+                  <h1 class="text-2xl text-black">Fast and efficient</h1>
+                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur architecto possimus ex sed expedita totam sapiente!</p>
+               </div>
+
+            </div>
+         </section>
+
+         <section class="w-full h-full">
+            <div class="bgImg-2 bg-center bg-cover bg-fixed bg-no-repeat flex justify-center mb-10 items-center w-full p-10 text-white">
+               <h1 class="text-3xl">Tasks I've finished previously</h1>
+            </div>
          </section>
       </main>
 
-      <footer id="footer" class="w-full h-48 bg-[rgba(52,53,65,.6)]">
-
+      <footer id="footer" class="w-full flex justify-center items-center mt-10 h-48 bg-[rgba(52,53,65)]">
+         <a>Gmail</a>
       </footer>
    </div>
 

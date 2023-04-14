@@ -16,7 +16,7 @@ body.addEventListener("click", (evt) => {
   navCheckBox.checked = false;
 });
 
-body.addEventListener("scroll", function (evt) {
+body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
 
   if (homeRect.bottom > 229) {
