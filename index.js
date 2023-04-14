@@ -12,15 +12,14 @@ body.addEventListener("click", (evt) => {
   ) {
     return;
   }
-  console.log(evt.target);
+  
   navCheckBox.checked = false;
 });
 
-body.addEventListener("scroll", function () {
-  const rect = document.querySelector("#home").getBoundingClientRect();
-  const bodyRect = body.getBoundingClientRect();
-  const visible = rect.top >= bodyRect.top && rect.bottom <= bodyRect.bottom;
-  if (visible) {
+body.addEventListener("scroll", function (evt) {
+  const homeRect = document.querySelector("#home").getBoundingClientRect();
+
+  if (homeRect.bottom > 229) {
     document.querySelector("#home div").classList.add("animateFromRight");
     document.querySelector("#home img").classList.add("animateFromLeft");
   } else {
@@ -28,7 +27,7 @@ body.addEventListener("scroll", function () {
     document.querySelector("#home img").classList.remove("animateFromLeft");
   }
 
-  if (body.scrollTop >= 200) {
+  if (body.scrollTop > 200) {
     document.querySelector(".topIcon").classList.add("showToTopIcon");
   } else {
     document.querySelector(".topIcon").classList.remove("showToTopIcon");
