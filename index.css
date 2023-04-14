@@ -149,7 +149,7 @@ div.navLinks:hover a:not(:hover) {
    color: #000;
 }
 
-#light:checked~div#pageContent>nav.navbar div.logo {
+#light:checked ~ div#pageContent > nav.navbar div.logo {
    background-color: #CFCFCF;
    color: #000;
 }
@@ -159,7 +159,6 @@ div.navLinks:hover a:not(:hover) {
 
 #dark:checked~#pageContent {
    background-color: #444654;
-   /* color: #000; */
    color: #fff;
 }
 

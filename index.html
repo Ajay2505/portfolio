@@ -61,8 +61,8 @@
          </div>
 
          <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
-         <label for="navCheckBox" class="sm:hidden selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
-            <span class="barsIcon w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
+         <label for="navCheckBox" class="sm:hidden select-none selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
+            <span class="barsIcon select-none w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
          </label>
 
          <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
@@ -112,7 +112,7 @@
                <div class="my-auto opacity-0 duration-1000 translate-x-64 animateFromRight">
                   <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal">Hello!</h1>
                   <br>
-                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">I'm <span class="text-[#370665] font-normal selection:bg-black">Ajay</span>, a</h1>
+                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">I'm <span class="text-[#27E1C1] font-normal selection:bg-black">Ajay</span>, a</h1>
                   <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal my-2">Web developer</h1>
                   <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">from <span class="font-normal">Hyderabad</span>.</h1>
                </div>
@@ -123,7 +123,7 @@
                <h1 class="text-3xl">Expertise in Web Development</h1>
             </div>
 
-            <div class="grid animateFromLeft grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-14 gap-10 w-full h-full bg-inherit">
+            <div class="work opacity-0 -translate-x-full duration-700 grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-14 gap-10 w-full h-full bg-inherit">
                
                <div class="flex flex-col duration-700 hover:-translate-y-4 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
                   <i class="fa-regular fa-face-smile text-8xl text-yellow-500 w-fit mx-auto"></i>
@@ -150,11 +150,15 @@
             <div class="bgImg-2 bg-center bg-cover bg-fixed bg-no-repeat flex justify-center mb-10 items-center w-full p-10 text-white">
                <h1 class="text-3xl">Tasks I've finished previously</h1>
             </div>
+
+            <div class="h-screen w-full">
+
+            </div>
          </section>
       </main>
 
-      <footer id="footer" class="w-full flex justify-center items-center mt-10 h-48 bg-[rgba(52,53,65)]">
-         <a>Gmail</a>
+      <footer id="footer" class="w-full text-white flex justify-center items-center mt-10 h-48 bg-[rgba(52,53,65)]">
+         <a target="_blank" href="https://www.linkedin.com/in/ajay-kumar-369931232/">LinkedIn</a>
       </footer>
    </div>
 

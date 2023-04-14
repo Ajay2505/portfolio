@@ -18,7 +18,14 @@ body.addEventListener("click", (evt) => {
 
 body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
+  const workRect = document.querySelector("#work").getBoundingClientRect();
 
+  if (body.scrollTop > 200) {
+    document.querySelector(".topIcon").classList.add("showToTopIcon");
+  } else {
+    document.querySelector(".topIcon").classList.remove("showToTopIcon");
+  }
+  
   if (homeRect.bottom > 229) {
     document.querySelector("#home div").classList.add("animateFromRight");
     document.querySelector("#home img").classList.add("animateFromLeft");
@@ -26,10 +33,10 @@ body.addEventListener("scroll", function () {
     document.querySelector("#home div").classList.remove("animateFromRight");
     document.querySelector("#home img").classList.remove("animateFromLeft");
   }
-
-  if (body.scrollTop > 200) {
-    document.querySelector(".topIcon").classList.add("showToTopIcon");
+  
+  if (workRect.bottom > 229 || workRect.top > 400) {
+    document.querySelector("#work div.work").classList.add("animateFromLeft");
   } else {
-    document.querySelector(".topIcon").classList.remove("showToTopIcon");
+    document.querySelector("#work div.work").classList.remove("animateFromLeft");
   }
 });
