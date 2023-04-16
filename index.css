@@ -11,6 +11,18 @@ a:hover {
    cursor: pointer;
 }
 
+::-webkit-scrollbar {
+   width: 9px;
+}
+
+::-webkit-scrollbar-track {
+   border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #525251;
+}
+
 .barsIcon::before,
 .barsIcon::after {
    content: "";
@@ -65,7 +77,7 @@ a:hover {
 }
 
 .bgImg-2 {
-   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 133, 0.5)), url("https://free4kwallpapers.com/uploads/originals/2019/06/13/nature--wallpaper.jpg");
+   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.3)), url("https://th.bing.com/th/id/OIP.UX7makRRIbRCMEeRez_YoQHaEo?pid=ImgDet&w=2560&h=1600&rs=1");
 }
 
 /* Labels */
@@ -112,6 +124,11 @@ navLogo- #A9A9A9  #CFCFCF
 
 .showToTopIcon {
    transform: translateX(0) scale(1);
+}
+
+.wrapper .carousel {
+   white-space: nowrap;
+   overflow: hidden;
 }
 
 /* Default theme */
@@ -170,6 +187,10 @@ div.navLinks:hover a:not(:hover) {
    background-color: rgba(53, 55, 64);
 }
 
+#dark:checked ~ div#pageContent::-webkit-scrollbar-thumb {
+   background-color: #000;
+}
+
 /* Blue theme */
 /* 645CBB 301E67  2155CD 1b1b32 4D77FF */
 #blue:checked~#pageContent {
@@ -186,7 +207,9 @@ div.navLinks:hover a:not(:hover) {
    background-color: #0a0a32;
 }
 
-
+#blue:checked ~ div#pageContent::-webkit-scrollbar-thumb {
+   background-color: #0a0a32;
+}
 
 
 

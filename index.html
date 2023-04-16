@@ -21,32 +21,40 @@
    <input class="hidden" type="radio" name="colorTheme" id="dark">
    <input class="hidden" type="radio" name="colorTheme" id="blue">
 
-   <div id="pageContent" class="scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
-      
-      <nav class="navbar backdrop-blur	z-40 pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
-         <div class="logo cursor-pointer py-3 sm:py-4 md:py-6 px-12 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
+   <div id="pageContent"
+      class="scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
+
+      <nav
+         class="navbar backdrop-blur	z-40 pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
+         <div
+            class="logo cursor-pointer py-3 sm:py-4 md:py-6 px-12 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
             <h1 class="text-4xl sm:text-6xl leading-snug skew-x-[16deg]"><a href="#main">Ajay</a></h1>
          </div>
 
          <div class="hidden navLinks sm:flex flex-row gap-5">
             <div class="relative themesDiv text-lg cursor-pointer hover:underline text-center">
-               <a class="themeIcon py-2 hover:scale-110">Theme<i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></a>
+               <a class="themeIcon py-2 hover:scale-110">Theme<i
+                     class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></a>
                <div class="themes bg-[#949494] rounded-md text-black hidden absolute right-1 flex-col">
-                  <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="default">
-                     Default 
-                     <span class="w-4 h-4 rounded-full bg-[#525251] my-auto ml-4">&nbsp;</span> 
+                  <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="default">
+                     Default
+                     <span class="w-4 h-4 rounded-full bg-[#525251] my-auto ml-4">&nbsp;</span>
                   </label>
-                  <label class="light relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="light">
+                  <label class="light relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="light">
                      Light
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span> 
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span>
                   </label>
-                  <label class="dark relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="dark">
+                  <label class="dark relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="dark">
                      Dark
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#353740]">&nbsp;</span> 
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#353740]">&nbsp;</span>
                   </label>
-                  <label class="blue relative flex flex-row cursor-pointer px-4 py-1 rounded-md hover:bg-zinc-300" for="blue">
+                  <label class="blue relative flex flex-row cursor-pointer px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="blue">
                      Blue
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#1b1b32]">&nbsp;</span> 
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#1b1b32]">&nbsp;</span>
                   </label>
                </div>
             </div>
@@ -61,45 +69,54 @@
          </div>
 
          <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
-         <label for="navCheckBox" class="sm:hidden select-none selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
+         <label for="navCheckBox"
+            class="sm:hidden select-none selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
             <span class="barsIcon select-none w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
          </label>
 
-         <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
+         <div
+            class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
             <a href="#work" class="py-3 text-lg cursor-pointer duration-75 hover:underline hover:scale-110">
                Work
                <i class="fa-solid fa-laptop-code"></i>
             </a>
-            <a href="#footer" class="hi py-3 text-lg justify-self-center cursor-pointer hover:underline hover:scale-110">
+            <a href="#footer"
+               class="hi py-3 text-lg justify-self-center cursor-pointer hover:underline hover:scale-110">
                Say Hi!
                <i class="fa-solid fa-hand rotate-45"></i>
             </a>
             <!-- <button class="text-white text-lg py-3">Theme</button> -->
             <div class="relative themesDiv text-lg cursor-pointer hover:underline text-center">
-               <button class="themeIcon py-2 hover:scale-110">Theme<i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></button>
+               <button class="themeIcon py-2 hover:scale-110">Theme<i
+                     class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></button>
                <div class="themes bg-[#949494] rounded-md text-black hidden absolute left-3 flex-col">
-                  <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="default">
-                     Default 
-                     <span class="w-4 h-4 rounded-full bg-[#525251] my-auto ml-4">&nbsp;</span> 
+                  <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="default">
+                     Default
+                     <span class="w-4 h-4 rounded-full bg-[#525251] my-auto ml-4">&nbsp;</span>
                   </label>
-                  <label class="light relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="light">
+                  <label class="light relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="light">
                      Light
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span> 
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span>
                   </label>
-                  <label class="dark relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300" for="dark">
+                  <label class="dark relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="dark">
                      Dark
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#353740]">&nbsp;</span> 
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#353740]">&nbsp;</span>
                   </label>
-                  <label class="blue relative flex flex-row cursor-pointer px-4 py-1 rounded-md hover:bg-zinc-300" for="blue">
+                  <label class="blue relative flex flex-row cursor-pointer px-4 py-1 rounded-md hover:bg-zinc-300"
+                     for="blue">
                      Blue
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#1b1b32]">&nbsp;</span> 
+                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#1b1b32]">&nbsp;</span>
                   </label>
                </div>
             </div>
          </div>
       </nav>
-      
-      <a href="#main" class="topIcon duration-700 bg-inherit shadow-[1px_2px_3px_1px_rgba(0,0,0,0.35)] hover:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)] text-inherit rounded-full text-2xl w-max py-3 px-5 z-50 h-max cursor-pointer fixed right-12 sm:right-20 bottom-16">
+
+      <a href="#main"
+         class="topIcon duration-700 bg-inherit shadow-[1px_2px_3px_1px_rgba(0,0,0,0.35)] hover:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)] text-inherit rounded-full text-2xl w-max py-3 px-5 z-50 h-max cursor-pointer fixed right-12 sm:right-20 bottom-16">
          <i class="fa-solid fa-up-long"></i>
       </a>
 
@@ -108,52 +125,90 @@
       <main class="w-full">
          <section class="w-full h-fit flex justify-center items-center">
             <div id="home" class="grid grid-flow-row grid-cols-2 w-full overflow-hidden">
-               <img class="inline-block opacity-0 duration-700 -translate-x-64 animateFromLeft rounded-full w-4/5 sm:w-3/5 ml-auto m-7" src="./assets/images/mainImg.jpg" alt="Main Image">
+               <img
+                  class="inline-block opacity-0 duration-700 -translate-x-64 animateFromLeft rounded-full w-4/5 sm:w-3/5 ml-auto m-7"
+                  src="./assets/images/mainImg.jpg" alt="Main Image">
                <div class="my-auto opacity-0 duration-1000 translate-x-64 animateFromRight">
                   <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal">Hello!</h1>
                   <br>
-                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">I'm <span class="text-[#27E1C1] font-normal selection:bg-black">Ajay</span>, a</h1>
+                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">I'm <span
+                        class="text-[#27E1C1] font-normal selection:bg-black">Ajay</span>, a</h1>
                   <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal my-2">Web developer</h1>
-                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">from <span class="font-normal">Hyderabad</span>.</h1>
+                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">from <span
+                        class="font-normal">Hyderabad</span>.</h1>
                </div>
             </div>
          </section>
          <section id="work" class="flex w-full h-full justify-center flex-col items-center">
-            <div class="bgImg bg-center bg-cover bg-fixed bg-no-repeat flex justify-center mb-10 items-center w-full p-10 text-white">
-               <h1 class="text-3xl">Expertise in Web Development</h1>
+            <div
+               class="bgImg bg-center bg-cover bg-fixed bg-no-repeat flex flex-col justify-center mb-10 items-center w-full p-5 md:p-10 text-white">
+               <h1 class="text-3xl mb-4">Expertise in Web Development</h1>
             </div>
 
-            <div class="work opacity-0 -translate-x-full duration-700 grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-14 gap-10 w-full h-full bg-inherit">
-               
-               <div class="flex flex-col duration-700 hover:-translate-y-4 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
+            <div
+               class="work opacity-0 -translate-x-full duration-700 grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-14 gap-10 w-full h-full bg-inherit">
+
+               <div
+                  class="flex flex-col duration-700 hover:-translate-y-4 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
                   <i class="fa-regular fa-face-smile text-8xl text-yellow-500 w-fit mx-auto"></i>
                   <h1 class="text-2xl text-black">User friendly</h1>
-                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur architecto possimus ex sed expedita totam sapiente!</p>
-               </div>
-               
-               <div class="flex flex-col duration-700 hover:-translate-y-5 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
-                  <img src="https://static.wixstatic.com/media/fb5049_5f8e26eb07394d5c8ba85b6ab2d7d674~mv2.png/v1/fill/w_1111,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Kia%20-%20Home%20NEW.png" alt="">
-                  <h1 class="text-2xl text-black">Responsive Design</h1>
-                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur architecto possimus ex sed expedita totam sapiente!</p>
+                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum
+                     deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur
+                     architecto possimus ex sed expedita totam sapiente!</p>
                </div>
 
-               <div class="flex flex-col duration-700 hover:-translate-y-5 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
+               <div
+                  class="flex flex-col duration-700 hover:-translate-y-5 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
+                  <img
+                     src="https://static.wixstatic.com/media/fb5049_5f8e26eb07394d5c8ba85b6ab2d7d674~mv2.png/v1/fill/w_1111,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Kia%20-%20Home%20NEW.png"
+                     alt="">
+                  <h1 class="text-2xl text-black">Responsive Design</h1>
+                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum
+                     deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur
+                     architecto possimus ex sed expedita totam sapiente!</p>
+               </div>
+
+               <div
+                  class="flex flex-col duration-700 hover:-translate-y-5 gap-4 p-6 justify-center text-center rounded-lg bg-[rgba(255,255,255,0.8)] shadow-[1px_1px_4px_rgba(0,0,0,0.35)] hover:shadow-[2px_4px_4px_rgba(0,0,0,0.35)] h-full w-full">
                   <i class="fa-solid fa-bolt text-8xl  text-yellow-500"></i>
                   <h1 class="text-2xl text-black">Fast and efficient</h1>
-                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur architecto possimus ex sed expedita totam sapiente!</p>
+                  <p class=" text-[#777]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis esse cum
+                     deserunt maiores, vero tempore minima, culpa possimus velit excepturi aut. Vel, consectetur
+                     architecto possimus ex sed expedita totam sapiente!</p>
                </div>
 
             </div>
          </section>
 
          <section class="w-full h-full">
-            <div class="bgImg-2 bg-center bg-cover bg-fixed bg-no-repeat flex justify-center mb-10 items-center w-full p-10 text-white">
+            <div
+               class="bgImg-2 md:px-32 lg:px-56 bg-center bg-cover bg-fixed bg-no-repeat flex flex-col justify-center mb-10 items-center w-full p-5 md:p-10 text-white">
                <h1 class="text-3xl">Tasks I've finished previously</h1>
+               <!-- <p class="text-xl text-[lavenderblush]">With nearly a year of experience in coding and several successfully completed projects, I am proficient in front-end development utilizing HTML5, CSS3, Bootstrap, and Tailwind CSS, and have a solid understanding of React and Next. Additionally, I have a basic knowledge of back-end programming languages, including Node.js.</p> -->
             </div>
 
-            <div class="h-screen w-full">
 
+            <div id="carousel" class="cursor-grab w-full px-[5vw] flex flex-row gap-4">
+               <img class="w-1/3"
+                  src="https://th.bing.com/th/id/OIP.UX7makRRIbRCMEeRez_YoQHaEo?pid=ImgDet&w=2560&h=1600&rs=1"
+                  alt="duh">
+               <img class="w-1/3"
+                  src="https://wallpapercave.com/wp/LcLsWmw.jpg"
+                  alt="duh">
+               <img class="w-1/3"
+                  src="https://th.bing.com/th/id/OIP.UX7makRRIbRCMEeRez_YoQHaEo?pid=ImgDet&w=2560&h=1600&rs=1"
+                  alt="duh">
+               <img class="w-1/3"
+                  src="https://wallpapercave.com/wp/LcLsWmw.jpg"
+                  alt="duh">
+                  <img class="w-1/3"
+                  src="https://th.bing.com/th/id/OIP.UX7makRRIbRCMEeRez_YoQHaEo?pid=ImgDet&w=2560&h=1600&rs=1"
+                  alt="duh">
+               <img class="w-1/3"
+                  src="https://wallpapercave.com/wp/LcLsWmw.jpg"
+                  alt="duh">
             </div>
+
          </section>
       </main>
 

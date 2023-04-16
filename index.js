@@ -1,6 +1,10 @@
 const body = document.getElementById("pageContent");
 const navCheckBox = document.getElementById("navCheckBox");
 const home = document.getElementById("home");
+const carousel = document.getElementById("carousel");
+
+let isDragging = false;
+let startX, scrollLeft;
 
 body.addEventListener("click", (evt) => {
   if (
@@ -39,4 +43,26 @@ body.addEventListener("scroll", function () {
   } else {
     document.querySelector("#work div.work").classList.remove("animateFromLeft");
   }
+});
+
+carousel.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+  isDragging = false;
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDragging = false;
+});
+
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 3;
+  carousel.scrollLeft = scrollLeft - walk;
 });
