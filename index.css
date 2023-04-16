@@ -126,9 +126,75 @@ navLogo- #A9A9A9  #CFCFCF
    transform: translateX(0) scale(1);
 }
 
-.wrapper .carousel {
-   white-space: nowrap;
-   overflow: hidden;
+#carousel::-webkit-scrollbar {
+   display: none; 
+}
+
+.dragging {
+   cursor: grabbing;
+}
+
+.hide {
+   transition: all .5s;
+   opacity: 0;
+   display: none;
+}
+
+.placeLeft {
+   transition: all .1s;
+   position: absolute;
+   transform: translate(-60%, -10%) scale(.4);
+   opacity: .5;
+}
+
+.placeRight {
+   transition: all .1s;
+   position: absolute;
+   transform: translateX(60%) scale(.4);
+   opacity: .5;
+}
+
+.placeCenter {
+   transition: all .1s;
+   position: relative;
+   z-index: 10;
+}
+
+.moveLeft {
+   transition: all 600ms;
+   transform: translateX(-1%) scale(.5);
+   opacity: .5;
+}
+
+.moveRight {
+   transition: all 600ms;
+   transform: translateX(-100%) scale(1);
+   opacity: .5;
+}
+
+.moveCenter {
+   transition: all 600ms;
+   position: relative;
+   z-index: 10;
+   transform: translateX(-50%) scale(1);
+   opacity: 1;
+}
+
+.removeLeft {
+   transition: all 600ms;
+   transform: translateX(-100%) scale(.5);
+   opacity: 0;
+}
+.removeRight {
+   transition: all 600ms;
+   transform: translateX(-100%) scale(.5);
+   opacity: 0;
+}
+
+#carousel img {
+   aspect-ratio: 1;
+   width: 38%;
+   height: fit-content;
 }
 
 /* Default theme */
@@ -212,7 +278,17 @@ div.navLinks:hover a:not(:hover) {
 }
 
 
+@media (max-width: 600px) {
+   #carousel img {
+      width: 60%;
+   }
+}
 
+@media (max-width: 768px) {
+   #carousel img {
+      width: 50%;
+   }
+}
 
 @keyframes waveHand {
    0% {
