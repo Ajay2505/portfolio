@@ -4,11 +4,12 @@ const home = document.getElementById("home");
 const carousel = document.getElementById("carousel");
 const carouselTitle = document.getElementById("carouselTitle");
 const leftArrow = document.getElementById("leftArrow");
-const right = document.getElementById("right");
+const rightArrow = document.getElementById("rightArrow");
 
-let isDragging = false;
-let startX, scrollLeft,prevScrollLeft;
-let isDragStart = false;
+// let isDragging = false;
+// let startX, scrollLeft,prevScrollLeft;
+// let isDragStart = false;
+const carouselItems = document.querySelectorAll("#carousel img");
 let currIndex = 1;
 
 body.addEventListener("click", (evt) => {
@@ -81,68 +82,61 @@ const dragStop = () => {
 // document.addEventListener("mouseup", dragStop);
 // carousel.addEventListener("touchend", dragStop);
 
-const carouselItems = [
-  {
-    src: "./assets/images/tokogadget-1.jpeg",
-    Title: "TokoGadget"
-  },
-  {
-    src: "./assets/images/flashChat-1.jpeg",
-    Title: "Flash Chat"
-  },
-  {
-    src: "./assets/images/password-1.jpeg",
-    Title: "Password Manager"
-  },
-  {
-    src: "./assets/images/tokogadget-1.jpeg",
-    Title: "TokoGadget"
-  },
-  {
-    src: "./assets/images/flashChat-1.jpeg",
-    Title: "Flash Chat"
-  },
-  {
-    src: "./assets/images/password-1.jpeg",
-    Title: "Password Manager"
-  },
+const carouselTitles = [
+  "TokoGadget",
+  "Flash Chat",
+  "Password Manager",
+  "TokoGadget",
+  "Flash Chat",
+  "Password Manager",
 ];
 
-// const setCaraousel = (index) => {
-//     if(index >= carouselItems.length || index < 0) return;
-    
-//     carousel.innerHTML += `
-//       <img class="placeLeft" src=${carouselItems[index-1].src} alt=${carouselItems[index-1].Title}/>
-//       <img class="placeCenter" src=${carouselItems[index].src} alt=${carouselItems[index].Title}/>
-//       <img class="placeRight" src=${carouselItems[index+1].src} alt="${carouselItems[index+1].Title}"/>
-//     `;
-// }
-
 const leftCar = () => {
-  if(currIndex + 2 >= carouselItems.length) {
-    leftArrow.classList.add("hide");
-  }
   if (currIndex + 1 >= carouselItems.length) return;
 
   currIndex++;
-  carouselTitle.innerText = carouselItems[currIndex].Title;
+  carouselTitle.innerText = carouselTitles[currIndex];
+  rightArrow.classList.remove("hide");
   
-  carousel.getElementsByTagName("img")[0].classList.add("removeLeft");
-  carousel.getElementsByTagName("img")[1].className = "";
-  carousel.getElementsByTagName("img")[1].classList.add("moveLeft");
-  carousel.getElementsByTagName("img")[2].className = "";
-  carousel.getElementsByTagName("img")[2].classList.add("moveCenter");
-
-  carousel.getElementsByTagName("img")[0].remove();
-
-  if (currIndex + 1 < carouselItems.length) {
-    setTimeout(() => {
-      carousel.innerHTML += `<img class="placeRight" src="${
-        carouselItems[currIndex + 1].src
-      }" alt="${carouselItems[currIndex + 1].Title}">`;
-    }, 600);
+  if(currIndex-2>=0) {
+    carouselItems[currIndex-2].className = "";
+    carouselItems[currIndex-2].classList.add("hide");
   }
-  
+  carouselItems[currIndex-1].className = "";
+  carouselItems[currIndex-1].classList.add("moveLeft");
+  carouselItems[currIndex].className = "";
+  carouselItems[currIndex].classList.add("moveCenter");
+
+  if(currIndex + 1 >= carouselItems.length) {
+    leftArrow.classList.add("hide");
+  } else {
+    carouselItems[currIndex+1].className = "";
+    carouselItems[currIndex+1].classList.add("placeRight");
+  }
+
 }
 
-// setCaraousel(1);
+const rightCar = () => {
+  if (currIndex - 1 < 0) return;
+
+  currIndex--;
+  carouselTitle.innerText = carouselTitles[currIndex];
+  leftArrow.classList.remove("hide");
+  
+  if(currIndex+2 < carouselItems.length) {
+    carouselItems[currIndex+2].className = "";
+    carouselItems[currIndex+2].classList.add("hide");
+
+  }
+  carouselItems[currIndex+1].className = "";
+  carouselItems[currIndex+1].classList.add("placeRight");
+  carouselItems[currIndex].className = "";
+  carouselItems[currIndex].classList.add("moveCenterFromLeft");
+
+  if(currIndex - 1 < 0) {
+    rightArrow.classList.add("hide");
+  } else {
+    carouselItems[currIndex-1].className = "";
+    carouselItems[currIndex-1].classList.add("placeLeft");
+  }
+}

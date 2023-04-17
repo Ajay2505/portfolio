@@ -1,3 +1,15 @@
+
+/* 1b1b32 0a0a32 */
+/* #2998ff, #5643fa*/
+
+/* 
+         Default  Light    Dark
+body-    #D7D6D6  #FFF     52,53,65
+navbar-  #525251  #F0F0F0
+navLogo- #A9A9A9  #CFCFCF
+*/
+
+
 html {
    font-family: 'Roboto', sans-serif;
 }
@@ -9,18 +21,6 @@ section {
 a:hover {
    text-decoration: underline;
    cursor: pointer;
-}
-
-::-webkit-scrollbar {
-   width: 9px;
-}
-
-::-webkit-scrollbar-track {
-   border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-   background-color: #525251;
 }
 
 .barsIcon::before,
@@ -105,19 +105,6 @@ a:hover {
    font-weight: 600;
 }
 
-/* section#skills:target ~ nav div.navLinks a.skillsLink {
-   color: red;
-} */
-/* 1b1b32 0a0a32 */
-/* #2998ff, #5643fa*/
-
-/* 
-         Default  Light    Dark
-body-    #D7D6D6  #FFF     52,53,65
-navbar-  #525251  #F0F0F0
-navLogo- #A9A9A9  #CFCFCF
-*/
-
 .topIcon {
    transform: translateX(9rem) scale(.1);
 }
@@ -126,16 +113,32 @@ navLogo- #A9A9A9  #CFCFCF
    transform: translateX(0) scale(1);
 }
 
+::-webkit-scrollbar {
+   width: 9px;
+}
+
+::-webkit-scrollbar-track {
+   border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #525251;
+}
+
+@media (max-width: 768px) {
+   ::-webkit-scrollbar, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+      display: none;
+   }
+}
+
+/* Carousel */
+
 #carousel::-webkit-scrollbar {
    display: none; 
 }
 
-.dragging {
-   cursor: grabbing;
-}
-
 .hide {
-   transition: all .5s;
+   transition: all .3s;
    opacity: 0;
    display: none;
 }
@@ -148,10 +151,16 @@ navLogo- #A9A9A9  #CFCFCF
 }
 
 .placeRight {
-   transition: all .1s;
+   transition: all 1s;
    position: absolute;
    transform: translateX(60%) scale(.4);
    opacity: .5;
+}
+
+.placeRightFromLeft {
+   position: absolute;
+   animation: placeRightFrames .6s forwards;
+
 }
 
 .placeCenter {
@@ -161,10 +170,10 @@ navLogo- #A9A9A9  #CFCFCF
 }
 
 .moveLeft {
-   transition: all 600ms;
-   transform: translateX(-1%) scale(.5);
-   opacity: .5;
+   z-index: 1;
+   animation: moveLeftFrames 0.6s forwards;
 }
+
 
 .moveRight {
    transition: all 600ms;
@@ -180,15 +189,12 @@ navLogo- #A9A9A9  #CFCFCF
    opacity: 1;
 }
 
-.removeLeft {
+.moveCenterFromLeft {
    transition: all 600ms;
-   transform: translateX(-100%) scale(.5);
-   opacity: 0;
-}
-.removeRight {
-   transition: all 600ms;
-   transform: translateX(-100%) scale(.5);
-   opacity: 0;
+   position: relative;
+   z-index: 10;
+   transform: translateX(0) scale(1);
+   opacity: 1;
 }
 
 #carousel img {
@@ -277,18 +283,18 @@ div.navLinks:hover a:not(:hover) {
    background-color: #0a0a32;
 }
 
-
 @media (max-width: 600px) {
    #carousel img {
-      width: 60%;
+      width: 70%;
    }
 }
 
 @media (max-width: 768px) {
    #carousel img {
-      width: 50%;
+      width: 60%;
    }
 }
+
 
 @keyframes waveHand {
    0% {
@@ -325,5 +331,29 @@ div.navLinks:hover a:not(:hover) {
    100% {
       opacity: 1;
       transform: translateX(0);
+   }
+}
+
+@keyframes moveLeftFrames {
+   0% {
+      opacity: 1;
+      transform: translateX(0) scale(.8);
+   }
+  
+   100% {
+      opacity: .4;
+      transform: translateX(-1%) scale(.4);
+   }
+}
+
+@keyframes placeRightFrames {
+   0% {
+      opacity: 1;
+      transform: translateX(0) scale(.8);
+   }
+  
+   100% {
+      opacity: .4;
+      transform: translateX(-60%) scale(.4);
    }
 }
