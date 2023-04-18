@@ -24,8 +24,8 @@ body.addEventListener("click", (evt) => {
 
 body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
-  const workRect = document.querySelector("#work").getBoundingClientRect();
-
+  const works = document.querySelectorAll("#work div.work");
+  
   if (body.scrollTop > 200) {
     document.querySelector(".topIcon").classList.add("showToTopIcon");
   } else {
@@ -39,13 +39,23 @@ body.addEventListener("scroll", function () {
     document.querySelector("#home div").classList.remove("animateFromRight");
     document.querySelector("#home img").classList.remove("animateFromLeft");
   }
-  
-  if (workRect.bottom > 120 || workRect.top > 240) {
-    document.querySelector("#work div.work").classList.add("animateFromLeft");
-  } else {
-    document.querySelector("#work div.work").classList.remove("animateFromLeft");
+
+  for(let i = 0; i < works.length; i++) {
+    if (isElementVisible(works[i], body)) {
+      works[i].classList.add("animateFromLeft");
+    } else {
+      works[i].classList.remove("animateFromLeft");
+    }
   }
 });
+
+const isElementVisible = (element, container) => {
+  var rect = element.getBoundingClientRect();
+  var containerRect = container.getBoundingClientRect();
+  var topVisible = rect.top >= containerRect.top && rect.top <= containerRect.bottom * 0.8;
+  var bottomVisible = rect.bottom <= containerRect.bottom && rect.bottom >= containerRect.top * 1.2;
+  return topVisible || bottomVisible;
+}
 
 const carouselTitles = [
   "TokoGadget",

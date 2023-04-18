@@ -62,14 +62,19 @@ a:hover {
 
 .animateFromLeft {
    opacity: 1;
-   animation: fromLeft .8s ease-in-out;
+   animation: fromLeft .5s ease-in-out;
    transform: translateX(0);
 }
 
 .animateFromRight {
    opacity: 1;
-   animation: fromRight .8s ease-in-out;
+   animation: fromRight .5s ease-in-out;
    transform: translateX(0);
+}
+
+.animateFromTop {
+   opacity: 1;
+   animation: fromTop .5s ease-in-out;
 }
 
 .bgImg {
@@ -78,6 +83,31 @@ a:hover {
 
 .bgImg-2 {
    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.3)), url("https://th.bing.com/th/id/OIP.UX7makRRIbRCMEeRez_YoQHaEo?pid=ImgDet&w=2560&h=1600&rs=1");
+}
+
+.descToggler ~ label:hover > i {
+   transform: translateX(1rem);
+}
+
+.descToggler ~ label::before {
+   content: "Read more";
+}
+
+.descToggler:checked ~ div.moreDesc {
+   display: flex;
+}
+
+.descToggler:checked ~ label::before {
+   content: "Read less";
+}
+
+.descToggler:checked ~ label i {
+   rotate: 180deg;
+   padding-right: 0.25rem;
+}
+
+.descToggler:checked ~ label:hover i {
+   transform: translateX(-1rem);
 }
 
 /* Labels */
@@ -334,6 +364,18 @@ div.navLinks:hover a:not(:hover) {
    100% {
       opacity: 1;
       transform: translateX(0);
+   }
+}
+
+@keyframes fromTop {
+   0% {
+      opacity: .1;
+      transform: translateY(-100%);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
    }
 }
 
