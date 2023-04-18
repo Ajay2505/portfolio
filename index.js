@@ -39,7 +39,7 @@ body.addEventListener("scroll", function () {
     document.querySelector("#home div").classList.remove("animateFromRight");
     document.querySelector("#home img").classList.remove("animateFromLeft");
   }
-  console.log(workRect.bottom,workRect.top);
+  
   if (workRect.bottom > 120 || workRect.top > 240) {
     document.querySelector("#work div.work").classList.add("animateFromLeft");
   } else {
@@ -63,14 +63,14 @@ const leftCar = () => {
   carouselTitle.innerText = carouselTitles[currIndex];
   rightArrow.classList.remove("hide");
   
-  if(currIndex-2>=0) {
+  if(currIndex-2 >= 0) {
     carouselItems[currIndex-2].className = "";
     carouselItems[currIndex-2].classList.add("hide");
   }
-  carouselItems[currIndex-1].className = "";
-  carouselItems[currIndex-1].classList.add("moveLeft");
   carouselItems[currIndex].className = "";
   carouselItems[currIndex].classList.add("moveCenter");
+  carouselItems[currIndex-1].className = "";
+  carouselItems[currIndex-1].classList.add("moveLeft");
 
   if(currIndex + 1 >= carouselItems.length) {
     leftArrow.classList.add("hide");

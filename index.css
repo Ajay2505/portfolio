@@ -160,7 +160,6 @@ a:hover {
 .placeRightFromLeft {
    position: absolute;
    animation: placeRightFrames .6s forwards;
-
 }
 
 .placeCenter {
@@ -289,18 +288,16 @@ div.navLinks:hover a:not(:hover) {
    background-color: #183153;
 }
 
-@media (max-width: 600px) {
-   #carousel img {
-      width: 80%;
-   }
-}
-
 @media (max-width: 768px) {
    #carousel img {
       width: 60%;
    }
 }
-
+@media (max-width: 600px) {
+   #carousel img {
+      width: 80%;
+   }
+}
 
 @keyframes waveHand {
    0% {
