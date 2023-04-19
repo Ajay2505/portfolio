@@ -292,7 +292,7 @@ div.navLinks:hover a:not(:hover) {
 
 @media (max-width: 768px) {
    #carousel img {
-      width: 60%;
+      width: 80%;
    }
 
    ::-webkit-scrollbar,
@@ -304,7 +304,7 @@ div.navLinks:hover a:not(:hover) {
 
 @media (max-width: 600px) {
    #carousel img {
-      width: 80%;
+      width: 95%;
    }
 }
 

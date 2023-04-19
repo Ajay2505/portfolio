@@ -8,6 +8,7 @@ const leftArrow = document.getElementById("leftArrow");
 const rightArrow = document.getElementById("rightArrow");
 const carouselItems = document.querySelectorAll("#carousel img");
 let currIndex = 1;
+let swiper;
 const carouselTitles = [
   "TokoGadget",
   "Flash Chat",
@@ -16,19 +17,6 @@ const carouselTitles = [
   "ChatApp",
   "Password Manager",
 ];
-
-carousel.addEventListener('touchstart', function(e) {
-  var touchStartX = e.touches[0].clientX;
-  carousel.addEventListener('touchmove', function(e) {
-    var touchMoveX = e.touches[0].clientX;
-    var swipeDistance = touchMoveX - touchStartX;
-    if (swipeDistance > 0) {
-      rightCar();
-    } else {
-      leftCar();
-    }
-  });
-});
 
 body.addEventListener("click", (evt) => {
   if (
@@ -129,3 +117,16 @@ const leftCar = () => {
     carouselItems[currIndex + 1].classList.add("placeRight");
   }
 };
+
+carousel.addEventListener('touchstart', function(e) {
+  var touchStartX = e.touches[0].clientX;
+  carousel.addEventListener('touchmove', function(e) {
+    var touchMoveX = e.touches[0].clientX;
+    var swipeDistance = touchMoveX - touchStartX;
+    clearTimeout(swiper);
+
+    swiper = setTimeout(() => {
+      swipeDistance > 0 ? rightCar() : leftCar();
+    }, 10);
+  });
+});
