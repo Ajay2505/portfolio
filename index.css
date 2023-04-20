@@ -18,7 +18,6 @@ section {
 }
 
 a:hover {
-   text-decoration: underline;
    cursor: pointer;
 }
 
@@ -57,6 +56,12 @@ a:hover {
 
 .hi:hover>i {
    animation: waveHand .9s ease-in-out infinite;
+}
+
+.animateFromBottom {
+   opacity: 1;
+   transform: translateY(0);
+   animation: fromBottom .5s ease-in-out;
 }
 
 .animateFromLeft {
@@ -358,26 +363,13 @@ div.navLinks:hover a:not(:hover) {
    }
 }
 
-/* @keyframes moveLeftFrames {
+@keyframes fromBottom {
    0% {
-      opacity: 1;
-      transform: translateX(0) scale(.8);
+      opacity: 0;
+      transform: translateY(10rem);
    }
-  
    100% {
-      opacity: .4;
-      transform: translateX(-1%) scale(.4);
+      opacity: 1;
+      transform: translateY(0);
    }
 }
-
-@keyframes placeRightFrames {
-   0% {
-      opacity: 1;
-      transform: translateX(0) scale(.8);
-   }
-  
-   100% {
-      opacity: .4;
-      transform: translateX(-60%) scale(.4);
-   }
-} */

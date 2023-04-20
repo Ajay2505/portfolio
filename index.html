@@ -25,16 +25,16 @@
 
    <div id="pageContent" class="scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
 
-      <nav class="navbar backdrop-blur	z-40 pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
-         <div class="logo cursor-pointer py-3 sm:py-4 md:py-6 px-12 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
+      <nav class="navbar backdrop-blur	z-40 sm:pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
+         <div class="logo cursor-pointer py-3 pl-10 pr-2 sm:py-4 md:py-6 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
             <h1 class="text-4xl sm:text-6xl leading-snug skew-x-[16deg]"><a href="#main">Ajay</a></h1>
          </div>
 
-         <div class="hidden navLinks sm:flex flex-row gap-5">
-            <div class="relative themesDiv text-lg cursor-pointer hover:underline text-center">
-               <a class="themeIcon py-2 hover:scale-110">Theme
+         <div class="navLinks flex flex-row gap-3 sm:gap-4">
+            <div class="relative themesDiv text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center cursor-pointer hover:underline text-center">
+               <a class="themeIcon flex flex-row py-2 hover:scale-110">Theme
                   <i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></a>
-               <div class="themes bg-[#949494] rounded-md text-black hidden absolute right-1 flex-col">
+               <div class="themes bg-[#949494] rounded-md text-black hidden absolute right-1 top-10 flex-col">
                   <label class="default cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
                      for="default">
                      Default
@@ -43,36 +43,37 @@
                   <label class="light relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
                      for="light">
                      Light
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span>
+                     <span class="w-4 h-4 absolute right-4 top-2 rounded-full bg-[#fff] my-auto ml-5">&nbsp;</span>
                   </label>
                   <label class="dark relative cursor-pointer flex flex-row px-4 py-1 rounded-md hover:bg-zinc-300"
                      for="dark">
                      Dark
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#353740]">&nbsp;</span>
+                     <span class="w-4 h-4 absolute right-4 top-2 rounded-full bg-[#353740]">&nbsp;</span>
                   </label>
                   <label class="blue relative flex flex-row cursor-pointer px-4 py-1 rounded-md hover:bg-zinc-300"
                      for="blue">
                      Blue
-                     <span class="w-4 h-4 absolute right-4 top-3 rounded-full bg-[#1b1b32]">&nbsp;</span>
+                     <span class="w-4 h-4 absolute right-4 top-2 rounded-full bg-[#1b1b32]">&nbsp;</span>
                   </label>
                </div>
             </div>
-            <a href="#work" class="text-lg cursor-pointer duration-75 hover:underline hover:scale-110">
+            
+            <a href="#work" class="text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center cursor-pointer duration-75 hover:underline hover:scale-110">
                Work
-               <i class="fa-solid fa-laptop-code"></i>
+               <i class="fa-solid fa-laptop-code text-sm sm:text-base"></i>
             </a>
-            <a href="#footer" class="hi text-lg cursor-pointer hover:underline hover:scale-110 mr-5">
+            <a href="#footer" class="hi text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center  cursor-pointer hover:scale-110">
                Say Hi!
                <i class="fa-solid fa-hand rotate-45"></i>
             </a>
          </div>
 
-         <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
+         <!-- <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
          <label for="navCheckBox" class="sm:hidden select-none selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
             <span class="barsIcon select-none w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
-         </label>
+         </label> -->
 
-         <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
+         <!-- <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
             <a href="#work" class="py-3 text-lg cursor-pointer duration-75 hover:underline hover:scale-110">
                Work
                <i class="fa-solid fa-laptop-code"></i>
@@ -108,7 +109,7 @@
                   </label>
                </div>
             </div>
-         </div>
+         </div> -->
       </nav>
 
       <a href="#main" class="topIcon select-none duration-700 bg-inherit text-inherit rounded-full text-base md:text-2xl w-max py-2 md:py-3 px-3 md:px-5 z-50 h-max cursor-pointer fixed right-8 sm:right-20 bottom-16 shadow-[1px_2px_3px_1px_rgba(0,0,0,0.35)] hover:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
@@ -173,7 +174,7 @@
                <h1 class="text-xl sm:text-2xl lg:text-3xl">Tasks I've finished previously</h1>
             </div>
 
-            <div class="flex flex-col scrollAnimation opacity-0 duration-500 -translate-x-full justify-center items-center w-full mb-10">
+            <div class="flex flex-col bottomToTopAnimation opacity-0 justify-center items-center w-full mb-10">
                <p class="text-sm md:text-xl w-5/6 lg:w-4/6 text-inherit">With over 2 years of experience in coding and a proven track record of successfully completed projects, I possess advanced proficiency in front-end development, utilizing cutting-edge technologies such as HTML5, CSS3, Bootstrap, and Tailwind CSS. I have developed an in-depth understanding of ReactJS and NextJS, allowing me to deliver complex, high-quality web applications to clients.</p>
                <p class="text-sm md:text-xl w-5/6 lg:w-4/6 text-inherit">Furthermore, I have a solid foundation in back-end programming languages, specifically Node.js, enabling me to build robust and scalable back-end systems to support front-end development. My extensive experience in the field has honed my problem-solving skills, attention to detail, and ability to work collaboratively with teams to achieve project goals.</p>
             </div>
@@ -211,7 +212,7 @@
                <div class="w-full scrollAnimation opacity-0 duration-700 translate-x-full imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
                   <img src="./assets/images/tokogadget-1.jpeg" alt="TokoGadget">
                </div>
-               <div class="w-full md:w-4/5 text-sm md:text-lg scrollAnimation">
+               <div class="w-full md:w-4/5 text-sm md:text-lg opacity-0 duration-500 bottomToTopAnimation">
                   <p>TokoGadget is a modern and visually appealing website design created using HTML, CSS, and Tailwind CSS. The website is designed to showcase the latest gadgets and technology products in a clean, minimalist, and user-friendly interface.</p>
                   <input type="checkbox" class="descToggler hidden" id="tokogadgetDesc">
                   <div class="moreDesc animateFromTop hidden flex-col">
@@ -230,7 +231,7 @@
                <div class="w-full scrollAnimation opacity-0 duration-500 imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
                   <img src="./assets/images/flashChat-1.jpeg" alt="TokoGadget">
                </div>
-               <div class="w-full md:w-4/5 text-sm md:text-lg scrollAnimation opacity-0 duration-300">
+               <div class="w-full md:w-4/5 text-sm md:text-lg bottomToTopAnimation opacity-0 duration-300">
                   <p>FlashChat is a real-time group chat application that allows users to create and join chat rooms with ease. The purpose of the website is to provide a platform for users to communicate with each other instantly and without the need to create an account or sign in.</p>
                   <input type="checkbox" class="descToggler hidden" id="flashChatDesc">
                   <div class="moreDesc animateFromTop hidden flex-col">

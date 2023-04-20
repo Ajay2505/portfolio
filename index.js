@@ -1,5 +1,5 @@
 const body = document.getElementById("pageContent");
-const navCheckBox = document.getElementById("navCheckBox");
+// const navCheckBox = document.getElementById("navCheckBox");
 const home = document.getElementById("home");
 
 const carousel = document.getElementById("carousel");
@@ -18,23 +18,24 @@ const carouselTitles = [
   "Password Manager",
 ];
 
-body.addEventListener("click", (evt) => {
-  if (
-    evt.target.classList.contains("navCheckBoxLabel") ||
-    evt.target == navCheckBox ||
-    evt.target.classList.contains("themeIcon") ||
-    evt.target.classList.contains("fa-sort-down") ||
-    evt.target.classList.contains("barsIcon")
-  ) {
-    return;
-  }
+// body.addEventListener("click", (evt) => {
+//   if (
+//     evt.target.classList.contains("navCheckBoxLabel") ||
+//     evt.target == navCheckBox ||
+//     evt.target.classList.contains("themeIcon") ||
+//     evt.target.classList.contains("fa-sort-down") ||
+//     evt.target.classList.contains("barsIcon")
+//   ) {
+//     return;
+//   }
 
-  navCheckBox.checked = false;
-});
+//   navCheckBox.checked = false;
+// });
 
 body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
   const elements = document.querySelectorAll(".scrollAnimation");
+  const texts = document.querySelectorAll(".bottomToTopAnimation");
 
   if (body.scrollTop > 200) {
     document.querySelector(".topIcon").classList.add("showToTopIcon");
@@ -57,6 +58,15 @@ body.addEventListener("scroll", function () {
       elements[i].classList.remove("animateFromLeft");
     }
   }
+
+  for (let i = 0; i < texts.length; i++) {
+    if (isElementVisible(texts[i], body)) {
+      texts[i].classList.add("animateFromBottom");
+    } else {
+      texts[i].classList.remove("animateFromBottom");
+    }
+  }
+
 });
 
 const isElementVisible = (element, container) => {
