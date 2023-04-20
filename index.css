@@ -38,12 +38,6 @@ a:hover {
    top: .35rem;
 }
 
-/* #navCheckBox:checked~div.mobileNavbar {
-   transform: translateY(0);
-   opacity: 1;
-   background-image: linear-gradient(to left bottom, #525251, #F0F0F0);
-} */
-
 .themesDiv:hover>.themeIcon>i {
    transform: rotate(0);
    margin-left: 4px;
@@ -112,6 +106,29 @@ a:hover {
 
 .descToggler:checked~label:hover i {
    transform: translateX(-1rem);
+}
+
+/* Rotating Cards */
+.card {
+   -webkit-perspective: 150rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+}
+
+.cardFront,.cardBack {
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   transition: all .8s ease;
+}
+
+.card:hover .cardFront {
+   -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card:hover .cardBack {
+   -webkit-transform: rotateY(0);
+   transform: rotateY(0);
 }
 
 /* Labels */
@@ -295,9 +312,24 @@ div.navLinks:hover a:not(:hover) {
    background-color: #183153;
 }
 
+@media (min-width: 1024px) {
+   .cardBack {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+   }
+}
+
 @media (max-width: 768px) {
    #carousel img {
       width: 80%;
+   }
+
+   .card:hover .cardBack {
+      transform: rotateY(0);
+   }
+
+   .card:hover .cardFront {
+      transform: rotateY(0);
    }
 
    ::-webkit-scrollbar,
