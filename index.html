@@ -26,12 +26,12 @@
    <div id="pageContent" class="scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
 
       <nav class="navbar backdrop-blur	z-40 sm:pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
-         <div class="logo cursor-pointer py-3 pl-10 pr-2 sm:py-4 md:py-6 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
+         <div class="logo cursor-pointer py-3 pl-8 pr-4 sm:py-4 md:py-6 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
             <h1 class="text-4xl sm:text-6xl leading-snug skew-x-[16deg]"><a href="#main">Ajay</a></h1>
          </div>
 
          <div class="navLinks flex flex-row gap-3 sm:gap-4">
-            <div class="relative themesDiv text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center cursor-pointer hover:underline text-center">
+            <div class="relative select-none themesDiv text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center cursor-pointer text-center">
                <a class="themeIcon flex flex-row py-2 hover:scale-110">Theme
                   <i class="fa-solid fa-sort-down duration-75 rotate-[-90deg]"></i></a>
                <div class="themes bg-[#949494] rounded-md text-black hidden absolute right-1 top-10 flex-col">
@@ -58,11 +58,11 @@
                </div>
             </div>
             
-            <a href="#work" class="text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center cursor-pointer duration-75 hover:underline hover:scale-110">
+            <a href="#work" class="text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center select-none cursor-pointer duration-75 hover:underline hover:scale-110">
                Work
-               <i class="fa-solid fa-laptop-code text-sm sm:text-base"></i>
+               <i class="fa-solid fa-laptop-code text-sm sm:text-base pl-1"></i>
             </a>
-            <a href="#footer" class="hi text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center  cursor-pointer hover:scale-110">
+            <a href="#footer" class="hi pr-4 text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center select-none cursor-pointer hover:scale-110">
                Say Hi!
                <i class="fa-solid fa-hand rotate-45"></i>
             </a>
@@ -71,9 +71,8 @@
          <!-- <input class="hidden" type="checkbox" name="checkbox" id="navCheckBox">
          <label for="navCheckBox" class="sm:hidden select-none selection:bg-transparent navCheckBoxLabel transition-all relative w-10 h-10 z-50 cursor-pointer text-center rounded-full flex flex-col items-center justify-center bg-white shadow-[1px_2px_5px_3px_rgba(0,0,0,0.35)] active:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
             <span class="barsIcon select-none w-5 h-px absolute inline-block bg-[#333]">&nbsp;</span>
-         </label> -->
-
-         <!-- <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
+         </label>
+          <div class="mobileNavbar sm:hidden flex flex-col ease-in-out justify-center items-center z-20 w-screen h-[65vh] fixed top-0 left-0 duration-700 -translate-y-full opacity-30">
             <a href="#work" class="py-3 text-lg cursor-pointer duration-75 hover:underline hover:scale-110">
                Work
                <i class="fa-solid fa-laptop-code"></i>
@@ -110,6 +109,7 @@
                </div>
             </div>
          </div> -->
+     
       </nav>
 
       <a href="#main" class="topIcon select-none duration-700 bg-inherit text-inherit rounded-full text-base md:text-2xl w-max py-2 md:py-3 px-3 md:px-5 z-50 h-max cursor-pointer fixed right-8 sm:right-20 bottom-16 shadow-[1px_2px_3px_1px_rgba(0,0,0,0.35)] hover:shadow-[1px_1px_1px_1px_rgba(0,0,0,0.35)]">
@@ -197,7 +197,7 @@
                   <img class="hide" src="./assets/images/chatapp.jpeg" alt="Chat App">
                   <img class="hide" src="./assets/images/password-1.jpeg" alt="Password Manager">
                </div>
-
+               
             </div>
             
          </section>
@@ -262,9 +262,9 @@
       </main>
 
       <footer id="footer" class="w-full gap-4 flex flex-col justify-center items-center mt-10 h-48 bg-[rgba(52,53,65)] text-white">
-         <a target="_blank" href="https://www.linkedin.com/in/ajay-kumar-369931232/"><i class="fa-brands fa-linkedin mr-1"></i>LinkedIn</a>
-         <a target="_blank" href="mailto:ajaykumarsanju2505@gmail.com"><i class="fa-regular fa-envelope"></i> Gmail</a>
-         <a target="_blank" href="https://github.com/Ajay2505" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+         <a class="hover:underline" target="_blank" href="https://www.linkedin.com/in/ajay-kumar-369931232/"><i class="fa-brands fa-linkedin mr-1"></i>LinkedIn</a>
+         <a class="hover:underline" target="_blank" href="mailto:ajaykumarsanju2505@gmail.com"><i class="fa-regular fa-envelope"></i> Gmail</a>
+         <a class="hover:underline" target="_blank" href="https://github.com/Ajay2505" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
       </footer>
    </div>
 

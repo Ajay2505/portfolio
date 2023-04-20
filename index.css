@@ -38,11 +38,11 @@ a:hover {
    top: .35rem;
 }
 
-#navCheckBox:checked~div.mobileNavbar {
+/* #navCheckBox:checked~div.mobileNavbar {
    transform: translateY(0);
    opacity: 1;
    background-image: linear-gradient(to left bottom, #525251, #F0F0F0);
-}
+} */
 
 .themesDiv:hover>.themeIcon>i {
    transform: rotate(0);
@@ -215,7 +215,7 @@ div.navLinks:hover a:not(:hover) {
    color: #7a7a7a;
 }
 
-#navCheckBox:checked+label>span {
+/* #navCheckBox:checked+label>span {
    background-color: transparent;
 }
 
@@ -229,7 +229,7 @@ div.navLinks:hover a:not(:hover) {
    top: 0;
    background: red;
    rotate: -135deg;
-}
+} */
 
 /* Default theme */
 .navbar {
