@@ -80,7 +80,12 @@ a:hover {
 }
 
 .bgImg-2 {
-   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.3)), url("https://th.bing.com/th/id/OIP.UX7makRRIbRCMEeRez_YoQHaEo?pid=ImgDet&w=2560&h=1600&rs=1");
+   background-image: url("https://th.bing.com/th/id/R.31fff4ea4fc337a9dc3d194b771d3d0b?rik=tcBdPe5wQYqM3g&riu=http%3a%2f%2fwww.hdwallback.net%2fwp-content%2fuploads%2f2018%2f01%2fWallpaper-Most-Beautiful-Nature-1280x1080.jpg&ehk=NtZK6Q5oB5hkJNCV1KsvMgdBGqfda%2br4Kh1qfuAkLRA%3d&risl=&pid=ImgRaw&r=0");
+}
+
+.bgImg-3 {
+   color: #fff;
+   background-image: url("https://i.pinimg.com/originals/7d/75/0e/7d750e2bf0a3ad15f0a5e121277b56d5.jpg");
 }
 
 .descToggler~label:hover>i {
@@ -268,6 +273,9 @@ div.navLinks:hover a:not(:hover) {
    color: #000;
 }
 
+#light:checked~div#pageContent::-webkit-scrollbar-thumb {
+   background-color: #444654;
+}
 
 /* Dark theme */
 
@@ -317,11 +325,21 @@ div.navLinks:hover a:not(:hover) {
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
    }
+
+   .cardBack,.cardFront {
+      box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
+      -webkit-box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
+      -moz-box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
+      border: 1px solid #a0a0a0a5;
+   }
 }
 
-@media (max-width: 768px) {
-   #carousel img {
-      width: 80%;
+@media (max-width: 1024px) {
+   .card {
+      box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
+      -webkit-box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
+      -moz-box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
+      border: 1px solid #a0a0a0a5;
    }
 
    .card:hover .cardBack {
@@ -330,6 +348,12 @@ div.navLinks:hover a:not(:hover) {
 
    .card:hover .cardFront {
       transform: rotateY(0);
+   }
+}
+
+@media (max-width: 768px) {
+   #carousel img {
+      width: 80%;
    }
 
    ::-webkit-scrollbar,
