@@ -62,7 +62,7 @@
                Work
                <i class="fa-solid fa-laptop-code text-sm sm:text-base pl-1"></i>
             </a>
-            <a href="#footer" class="hi pr-4 text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center select-none cursor-pointer hover:scale-110">
+            <a href="#footer" class="hi pr-4 text-sm sm:text-lg md:text-xl flex flex-row gap-x-[0.35rem] justify-center items-center select-none cursor-pointer hover:scale-110">
                Say Hi!
                <i class="fa-solid fa-hand rotate-45"></i>
             </a>
@@ -162,7 +162,7 @@
                   <i class="fa-solid fa-angles-right select-none"></i>
                </h1>
                
-               <div id="carousel" class="scrollAnimation flex justify-center relative opacity-0 translate-x-full duration-700 h-full w-[94vw] mx-auto">
+               <div id="carousel" class="bottomToTopAnimation flex justify-center relative opacity-0 translate-x-full duration-700 h-full w-[94vw] mx-auto">
                   <img class="placeLeft" src="./assets/images/tokogadget-1.jpeg" alt="TokoGadget">
                   <img class="placeCenter" src="./assets/images/flashChat-1.jpeg" alt="Flash chat">
                   <img class="placeRight" src="./assets/images/password-1.jpeg" alt="Password Manager">
@@ -171,6 +171,21 @@
                   <img class="hide" src="./assets/images/password-1.jpeg" alt="Password Manager">
                </div>
 
+               <br><br>
+               <div id="carRadiosDiv" class="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2  flex flex-row gap-x-2">
+                  <input type="radio" class="hidden" id="car0" name="carouselRadios">
+                  <label onclick="setCar(0)" for="car0" class="w-7 relative bg-gray-400 cursor-pointer h-1 block"></label>
+                  <input type="radio" checked class="hidden" id="car1" name="carouselRadios">
+                  <label onclick="setCar(1)" for="car1" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
+                  <input type="radio" class="hidden" id="car2" name="carouselRadios">
+                  <label onclick="setCar(2)" for="car2" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
+                  <input type="radio" class="hidden" id="car3" name="carouselRadios">
+                  <label onclick="setCar(3)" for="car3" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
+                  <input type="radio" class="hidden" id="car4" name="carouselRadios">
+                  <label onclick="setCar(4)" for="car4" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
+                  <input type="radio" class="hidden" id="car5" name="carouselRadios">
+                  <label onclick="setCar(5)" for="car5" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
+               </div>
             </div>
             
          </section>
@@ -182,7 +197,7 @@
 
             <h1 class="my-4 md:my-7 text-center text-lg sm:text-xl md:text-2xl font-semibold">TokoGadget</h1>
             <div class="flex flex-col gap-4 md:gap-8 grid-flow-row justify-center items-center justify-items-center grid-cols-1 md:grid-cols-1 w-full h-full px-[4vw] mx-auto">
-               <div class="w-full scrollAnimation opacity-0 duration-700 translate-x-full imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
+               <div class="w-full bottomToTopAnimation opacity-0 duration-700 translate-x-full imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
                   <img src="./assets/images/tokogadget-1.jpeg" alt="TokoGadget">
                </div>
                <div class="w-full md:w-4/5 text-sm md:text-lg opacity-0 duration-500 bottomToTopAnimation">
@@ -201,7 +216,7 @@
 
             <h1 class="my-4 md:my-7 text-center text-lg sm:text-xl md:text-2xl font-semibold">Flash Chat</h1>
             <div class="flex flex-col gap-4 md:gap-8 grid-flow-row justify-center items-center justify-items-center grid-cols-1 md:grid-cols-1 w-full h-full px-[4vw] mx-auto">
-               <div class="w-full scrollAnimation opacity-0 duration-500 imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
+               <div class="w-full bottomToTopAnimation opacity-0 duration-500 imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
                   <img src="./assets/images/flashChat-1.jpeg" alt="TokoGadget">
                </div>
                <div class="w-full md:w-4/5 text-sm md:text-lg bottomToTopAnimation opacity-0 duration-300">

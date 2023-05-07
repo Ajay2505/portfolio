@@ -1,5 +1,4 @@
 const body = document.getElementById("pageContent");
-// const navCheckBox = document.getElementById("navCheckBox");
 const home = document.getElementById("home");
 
 const carousel = document.getElementById("carousel");
@@ -17,20 +16,9 @@ const carouselTitles = [
   "ChatApp",
   "Password Manager",
 ];
+// const carRadiosDiv = document.getElementById("carRadiosDiv");
+const carRadios = document.querySelectorAll('input[type="radio"][name="carouselRadios"]');
 
-// body.addEventListener("click", (evt) => {
-//   if (
-//     evt.target.classList.contains("navCheckBoxLabel") ||
-//     evt.target == navCheckBox ||
-//     evt.target.classList.contains("themeIcon") ||
-//     evt.target.classList.contains("fa-sort-down") ||
-//     evt.target.classList.contains("barsIcon")
-//   ) {
-//     return;
-//   }
-
-//   navCheckBox.checked = false;
-// });
 
 body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
@@ -93,6 +81,8 @@ const rightCar = () => {
   carouselTitle.innerText = carouselTitles[currIndex - 1];
 
   currIndex--;
+  const label = document.getElementById("car" + currIndex);
+  label.checked = true;
 
   if (currIndex <= 0) {
     rightArrow.classList.add("hide");
@@ -119,6 +109,8 @@ const leftCar = () => {
   carouselItems[currIndex + 1].classList.add("placeCenter");
 
   currIndex++;
+  const label = document.getElementById("car" + currIndex);
+  label.checked = true;
 
   if (currIndex + 1 >= carouselItems.length) {
     leftArrow.classList.add("hide");
@@ -140,3 +132,32 @@ carousel.addEventListener('touchstart', function(e) {
     }, 10);
   });
 });
+
+const setCar = (index) => {
+  if (currIndex === index) {
+    return;
+  }
+  if (index > currIndex) {
+    leftCar();
+    setTimeout(() => {
+      setCar(index);
+    }, 0);
+  }
+  if (index < currIndex) {
+    rightCar();
+    setTimeout(() => {
+      setCar(index);
+    }, 0);
+  }
+}
+
+const updateCurrentImageIndex = () => {
+  if (currIndex + 1 >= carouselItems.length) {
+    setCar(0);
+  }
+  leftCar();
+}
+
+setInterval(function() {
+  updateCurrentImageIndex();
+}, 6000);

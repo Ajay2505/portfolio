@@ -1,13 +1,3 @@
-/* 1b1b32 0a0a32 */
-/* #2998ff, #5643fa*/
-
-/* 
-         Default  Light    Dark
-body-    #D7D6D6  #FFF     52,53,65
-navbar-  #525251  #F0F0F0
-navLogo- #A9A9A9  #CFCFCF
-*/
-
 
 html {
    font-family: 'Roboto', sans-serif;
@@ -53,9 +43,10 @@ a:hover {
 }
 
 .animateFromBottom {
-   opacity: 1;
-   transform: translateY(0);
-   animation: fromBottom .5s ease-in-out;
+   opacity: 0;
+   animation: fromBottom .8s forwards; 
+   /* opacity: 1;
+   transform: translateY(0);*/
 }
 
 .animateFromLeft {
@@ -237,21 +228,16 @@ div.navLinks:hover a:not(:hover) {
    color: #7a7a7a;
 }
 
-/* #navCheckBox:checked+label>span {
-   background-color: transparent;
-}
-
-#navCheckBox:checked+label>span::before {
+input[type="radio"][name="carouselRadios"]:checked + label::before{
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 100%;
    top: 0;
-   transform: rotate(135deg);
-   background: red;
+   left: 0;
+   background-color: #000;
+   animation: widthAn 5.8s ease;
 }
-
-#navCheckBox:checked+label>span::after {
-   top: 0;
-   background: red;
-   rotate: -135deg;
-} */
 
 /* Default theme */
 .navbar {
@@ -297,7 +283,6 @@ div.navLinks:hover a:not(:hover) {
 }
 
 /* Blue theme */
-/* 645CBB 301E67  2155CD 1b1b32 4D77FF */
 #blue:checked~#pageContent {
    background-color: #5a66cf;
    color: #000;
@@ -421,11 +406,24 @@ div.navLinks:hover a:not(:hover) {
 
 @keyframes fromBottom {
    0% {
-      opacity: 0;
-      transform: translateY(10rem);
+      -webkit-transform: translate3d(0, 200px, 0);
+      transform: translate3d(0, 200px, 0);
+      /* opacity: 0;
+      transform: translateY(10rem); */
    }
    100% {
       opacity: 1;
-      transform: translateY(0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      /* transform: translateY(0); */
+   }
+}
+
+@keyframes widthAn {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 100%;
    }
 }
