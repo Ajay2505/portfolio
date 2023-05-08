@@ -228,7 +228,7 @@ div.navLinks:hover a:not(:hover) {
    color: #7a7a7a;
 }
 
-input[type="radio"][name="carouselRadios"]:checked + label::before{
+input[type="radio"][name="carouselRadios"] + label::before{
    content: "";
    position: absolute;
    width: 0;
@@ -236,9 +236,13 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
    top: 0;
    left: 0;
    background-color: #000;
-   animation: widthAn 5.8s ease;
 }
-
+input[type="radio"][name="carouselRadios"]:checked + label::before{
+   transition: width 6s;
+   top: 1%;
+   height: 120%;
+   width: 101%;
+}
 /* Default theme */
 .navbar {
    background-image: linear-gradient(to right, rgba(53, 55, 64, 0), #525251 58.85%);
@@ -416,14 +420,5 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       /* transform: translateY(0); */
-   }
-}
-
-@keyframes widthAn {
-   0% {
-      width: 0;
-   }
-   100% {
-      width: 100%;
    }
 }

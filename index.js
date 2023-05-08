@@ -16,9 +16,6 @@ const carouselTitles = [
   "ChatApp",
   "Password Manager",
 ];
-// const carRadiosDiv = document.getElementById("carRadiosDiv");
-const carRadios = document.querySelectorAll('input[type="radio"][name="carouselRadios"]');
-
 
 body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
@@ -151,7 +148,7 @@ const setCar = (index) => {
   }
 }
 
-const updateCurrentImageIndex = () => {
+const updateCarousel = () => {
   if (currIndex + 1 >= carouselItems.length) {
     setCar(0);
   }
@@ -159,5 +156,5 @@ const updateCurrentImageIndex = () => {
 }
 
 setInterval(function() {
-  updateCurrentImageIndex();
+  updateCarousel();
 }, 6000);
