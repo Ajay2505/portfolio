@@ -162,6 +162,34 @@ a:hover {
    -moz-box-shadow: 11px 9px 5px -2px rgba(0, 0, 0, 0.28);
 }
 
+.underlineAnime::before {
+   content: "";
+   width: 100%;
+   background-color: #999;
+   height: 3px;
+   position: absolute;
+   bottom: -3px;
+   left: 0;
+   transition: width .5s ease;
+}
+
+.underlineAnime::after {
+   content: "";
+   width: 0%;
+   background-color: currentColor;
+   height: 3.3px;
+   position: absolute;
+   bottom: -3px;
+   right: 0;
+   transition: width .5s ease-in-out;
+}
+
+.underlineAnime:hover::after {
+   width: 100%;
+   left: 0;
+   right: auto;
+}
+
 ::-webkit-scrollbar {
    width: 9px;
 }

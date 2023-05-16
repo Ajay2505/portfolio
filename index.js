@@ -15,6 +15,7 @@ const carouselTitles = [
   "Portfolio",
   "ChatApp",
   "Password Manager",
+  "Note Hive",
 ];
 
 body.addEventListener("scroll", function () {

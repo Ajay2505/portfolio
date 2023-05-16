@@ -28,7 +28,7 @@
    <div id="pageContent" class="scroll-smooth bg-[#D7D6D6] w-screen h-screen overflow-y-auto overflow-x-hidden duration-75">
 
       <nav class="navbar backdrop-blur	z-40 sm:pr-6 w-screen h-14 sm:h-20 fixed top-0 left-0 flex justify-between items-center text-white">
-         <div class="logo cursor-pointer py-3 pl-8 pr-4 sm:py-4 md:py-6 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
+         <div class="logo cursor-pointer py-3 pl-8 pr-6 sm:py-4 md:py-6 sm:px-16 md:px-24 skew-x-[-16deg] ml-[-1rem] bg-[#525251]">
             <h1 class="text-4xl sm:text-6xl leading-snug skew-x-[16deg]"><a href="#main">Ajay</a></h1>
          </div>
 
@@ -60,7 +60,7 @@
                </div>
             </div>
             
-            <a href="#work" class="text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center select-none cursor-pointer duration-75 hover:underline hover:scale-110">
+            <a href="#work" class="text-sm sm:text-lg md:text-xl flex flex-row justify-center items-center select-none cursor-pointer duration-75 hover:scale-110">
                Work
                <i class="fa-solid fa-laptop-code text-sm sm:text-base pl-1"></i>
             </a>
@@ -181,6 +181,7 @@
                   <img class="hide" src="./assets/images/portfolio.jpeg" alt="Portfolio">
                   <img class="hide" src="./assets/images/chatapp.jpeg" alt="Chat App">
                   <img class="hide" src="./assets/images/password-1.jpeg" alt="Password Manager">
+                  <img class="hide" src="./assets/images/notehive.jpeg" alt="Note Hive">
                </div>
 
                <br><br>
@@ -197,6 +198,8 @@
                   <label onclick="setCar(4)" for="car4" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
                   <input type="radio" class="hidden" id="car5" name="carouselRadios">
                   <label onclick="setCar(5)" for="car5" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
+                  <input type="radio" class="hidden" id="car6" name="carouselRadios">
+                  <label onclick="setCar(6)" for="car5" class="w-7 relative bg-gray-400 cursor-pointer h-1 block">&nbsp;</label>
                </div>
             </div>
             
@@ -207,12 +210,14 @@
                <h1 class="text-xl sm:text-2xl lg:text-3xl">Project Details</h1>
             </div>
 
-            <h1 class="my-4 md:my-7 text-center text-lg sm:text-xl md:text-2xl font-semibold">TokoGadget</h1>
-            <div class="flex flex-col gap-4 md:gap-8 grid-flow-row justify-center items-center justify-items-center grid-cols-1 md:grid-cols-1 w-full h-full px-[4vw] mx-auto">
+            <h1 class="my-4 md:my-7 text-center text-lg sm:text-xl md:text-2xl font-semibold">
+               <a target="_blank" class="underlineAnime relative" href="https://ajay2505.github.io/tokogadget/">TokoGadget</a>
+            </h1> 
+            <div class="flex flex-col gap-4 md:gap-8 justify-center items-center justify-items-center w-full h-full px-[4vw] mx-auto">
                <div class="w-full bottomToTopAnimation opacity-0 duration-700 translate-x-full imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
                   <img src="./assets/images/tokogadget-1.jpeg" alt="TokoGadget">
                </div>
-               <div class="w-full md:w-4/5 text-sm md:text-lg opacity-0 duration-500 bottomToTopAnimation">
+               <div class="w-full md:w-4/5 text-sm md:text-lg overflow-hidden opacity-0 duration-500 bottomToTopAnimation">
                   <p>TokoGadget is a modern and visually appealing website design created using HTML, CSS, and Tailwind CSS. The website is designed to showcase the latest gadgets and technology products in a clean, minimalist, and user-friendly interface.</p>
                   <input type="checkbox" class="descToggler hidden" id="tokogadgetDesc">
                   <div class="moreDesc animateFromTop hidden flex-col">
@@ -224,14 +229,14 @@
                </div>
             </div>
 
-            <hr class="border my-4 w-4/5 mx-auto border-gray-400">
+            <hr class="border my-4 w-4/5 mx-auto border-white">
 
             <h1 class="my-4 md:my-7 text-center text-lg sm:text-xl md:text-2xl font-semibold">Flash Chat</h1>
-            <div class="flex flex-col gap-4 md:gap-8 grid-flow-row justify-center items-center justify-items-center grid-cols-1 md:grid-cols-1 w-full h-full px-[4vw] mx-auto">
+            <div class="flex flex-col gap-4 md:gap-8 justify-center items-center justify-items-center w-full h-full px-[4vw] mx-auto">
                <div class="w-full bottomToTopAnimation opacity-0 duration-500 imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
                   <img src="./assets/images/flashChat-1.jpeg" alt="TokoGadget">
                </div>
-               <div class="w-full md:w-4/5 text-sm md:text-lg bottomToTopAnimation opacity-0 duration-300">
+               <div class="w-full md:w-4/5 text-sm md:text-lg overflow-hidden bottomToTopAnimation opacity-0 duration-300">
                   <p>FlashChat is a real-time group chat application that allows users to create and join chat rooms with ease. The purpose of the website is to provide a platform for users to communicate with each other instantly and without the need to create an account or sign in.</p>
                   <input type="checkbox" class="descToggler hidden" id="flashChatDesc">
                   <div class="moreDesc animateFromTop hidden flex-col">
@@ -257,6 +262,42 @@
                </div>
             </div>
             
+            <hr class="border my-4 w-4/5 mx-auto border-gray-400">
+
+            <h1 class="my-4 md:my-7 text-center text-lg sm:text-xl md:text-2xl font-semibold">
+               <a target="_blank" class="underlineAnime relative" href="https://notehive-2505.web.app">Note Hive</a>
+            </h1> 
+
+            <div class="flex flex-col gap-4 md:gap-8 justify-center items-center justify-items-center w-full h-full px-[4vw] mx-auto">
+               <div class="w-full bottomToTopAnimation opacity-0 duration-500 imgShadow md:w-4/5 outline-slate-400 outline-1 outline rounded-md overflow-hidden">
+                  <img src="./assets/images/notehive.jpeg" alt="NoteHive">
+               </div>
+
+               <!-- <div class="w-full md:w-4/5 text-sm md:text-lg overflow-hidden bottomToTopAnimation opacity-0 duration-300">
+                  <p>FlashChat is a real-time group chat application that allows users to create and join chat rooms with ease. The purpose of the website is to provide a platform for users to communicate with each other instantly and without the need to create an account or sign in.</p>
+                  <input type="checkbox" class="descToggler hidden" id="flashChatDesc">
+                  <div class="moreDesc animateFromTop hidden flex-col">
+                     <ul class="list-disc">
+                        <li class="list-inside">
+                           The website's target audience is anyone who wants to chat with others in a group setting, whether it's for social or professional reasons.
+                        </li>
+                        <li class="list-inside">
+                           FlashChat is particularly useful for organizing group chats around specific topics, such as events, interests, or projects.
+                        </li>
+                        <li class="list-inside">
+                           One of the main features of FlashChat is its ability to send location information. This feature allows users to share their current location with others in the chat room, making it easy to coordinate meetups or to provide directions. Additionally, the website allows users to switch between light and dark themes, depending on their preference.
+                        </li>
+                        <li class="list-inside">
+                           FlashChat is mobile-responsive, which means that users can access it from their smartphones or tablets. The website's interface is designed to be simple and intuitive, making it easy for users to navigate and use the various features.
+                        </li>
+                        <li class="list-inside">
+                           One unique aspect of FlashChat is that chats are not saved, which is why it's called "flash" chat. This means that once the chat room is closed or the user logs out, the chat history is deleted, which can be useful for users who value their privacy.
+                        </li>
+                     </ul>
+                  </div>
+                  <label class="cursor-pointer text-[#19376D] hover:underline" for="flashChatDesc"><i class="fa-solid fa-arrow-right pl-1 duration-500"></i></label>
+               </div> -->
+            </div>
          </section>
 
       </main>
