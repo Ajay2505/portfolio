@@ -44,15 +44,11 @@ a:hover {
 
 .animateFromBottom {
    opacity: 0;
-   animation: fromBottom .8s forwards; 
-   /* opacity: 1;
-   transform: translateY(0);*/
+   animation: fromBottom .8s forwards;
 }
 
 .animateFromLeft {
-   opacity: 1;
-   animation: fromLeft .5s ease-in-out;
-   transform: translateX(0);
+   animation: fromLeft .5s forwards;
 }
 
 .animateFromRight {
@@ -374,8 +370,8 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
 
 @keyframes fromLeft {
    0% {
-      transform: translateX(-40rem);
-      opacity: .5;
+      transform: translateX(-300px);
+      opacity: 0.5;
    }
 
    100% {
@@ -410,15 +406,12 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
 
 @keyframes fromBottom {
    0% {
-      -webkit-transform: translate3d(0, 200px, 0);
-      transform: translate3d(0, 200px, 0);
-      /* opacity: 0;
-      transform: translateY(10rem); */
+      -webkit-transform: translate3d(0, 150px, 0);
+      transform: translate3d(0, 150px, 0);
    }
    100% {
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
-      /* transform: translateY(0); */
    }
 }
