@@ -75,8 +75,8 @@ a:hover {
    background-image: url("https://i.pinimg.com/originals/7d/75/0e/7d750e2bf0a3ad15f0a5e121277b56d5.jpg");
 }
 
-.descToggler~label:hover>i {
-   transform: translateX(1rem);
+.descToggler~label:hover>i, .hoverAr:hover > i {
+   transform: translateX(.7rem);
 }
 
 .descToggler~label::before {
@@ -181,7 +181,7 @@ a:hover {
    position: absolute;
    bottom: -3px;
    right: 0;
-   transition: width .5s ease-in-out;
+   transition: width .5s cubic-bezier(0,.42,.93,.78);
 }
 
 .underlineAnime:hover::after {
@@ -267,6 +267,39 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
    height: 120%;
    width: 101%;
 }
+
+.backdrop {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: .001px;
+   z-index: 59;
+   background-color: rgba(0, 0, 0, 0.55);
+   transition: height .3s cubic-bezier(0,.42,.93,.78);
+}
+
+#notehiveDesc:target {
+   height: 100vh;
+}
+
+#notehiveDesc:target > div {
+   animation: scaler .3s cubic-bezier(0,.42,.93,.78);
+}
+
+#notehiveDesc:not(:target) > div {
+   transform: scale3D(0,0,-10%);
+   transition: transform .2s cubic-bezier(0,.42,.93,.78);
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+   background-color: #525251;
+}
+
+.scrollBar::-webkit-scrollbar {
+   width: 5px;
+}
+
 /* Default theme */
 .navbar {
    background-image: linear-gradient(to right, rgba(53, 55, 64, 0), #525251 58.85%);
@@ -441,5 +474,14 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
+   }
+}
+
+@keyframes scaler {
+   0% {
+      transform: scale3D(0,0, -10%);
+   }
+   100% {
+      transform: scale3D(1,1,1);
    }
 }
