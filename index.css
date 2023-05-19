@@ -170,7 +170,7 @@ a:hover {
    position: absolute;
    bottom: -3px;
    left: 0;
-   transition: width .5s ease;
+   transition: width .5s cubic-bezier(0,.42,.93,.78);
 }
 
 .underlineAnime::after {
@@ -300,6 +300,12 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
    width: 5px;
 }
 
+.showToast {
+   opacity: 1;
+   top: -40px;
+   z-index: 1;
+}
+
 /* Default theme */
 .navbar {
    background-image: linear-gradient(to right, rgba(53, 55, 64, 0), #525251 58.85%);
@@ -324,6 +330,11 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
    background-color: #444654;
 }
 
+#light:checked~div#pageContent>footer {
+   background-color: rgb(105, 105, 105);
+   color: #303030;
+}
+
 /* Dark theme */
 
 #dark:checked~#pageContent {
@@ -341,6 +352,11 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
 
 #dark:checked~div#pageContent::-webkit-scrollbar-thumb {
    background-color: #000;
+}
+
+#dark:checked~div#pageContent>footer {
+   background-color: rgba(32,33,35,1);
+   color: #737373;
 }
 
 /* Blue theme */
@@ -364,6 +380,7 @@ input[type="radio"][name="carouselRadios"]:checked + label::before{
 
 #blue:checked~div#pageContent>footer {
    background-color: #183153;
+   color: #999;
 }
 
 @media (min-width: 1024px) {

@@ -159,3 +159,12 @@ const updateCarousel = () => {
 setInterval(function() {
   updateCarousel();
 }, 6000);
+
+const copyMail = (evt) => {
+  const targetClass = evt.currentTarget.firstElementChild.classList;
+  navigator.clipboard.writeText("ajaykumarsanju2505@gmail.com");
+  targetClass.add("showToast");
+  setTimeout(() => {
+    targetClass.remove("showToast");
+  }, 800); 
+}
