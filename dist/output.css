@@ -1348,6 +1348,16 @@ video {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.selection\:text-white *::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.selection\:text-white *::selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .selection\:bg-\[\#0a0a32\]::-moz-selection {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 50 / var(--tw-bg-opacity));
@@ -1376,6 +1386,16 @@ video {
 .selection\:text-slate-400::selection {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.selection\:text-white::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.selection\:text-white::selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:scale-110:hover {

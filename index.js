@@ -17,6 +17,7 @@ const carouselTitles = [
   "Password Manager",
   "Note Hive",
 ];
+let interval;
 
 body.addEventListener("scroll", function () {
   const homeRect = document.querySelector("#home").getBoundingClientRect();
@@ -66,6 +67,8 @@ const isElementVisible = (element, container) => {
 const rightCar = () => {
   if (currIndex - 1 < 0) return;
   leftArrow.classList.remove("hide");
+  clearInterval(interval);
+  startInterval();
 
   if (currIndex + 1 < carouselItems.length) {
     carouselItems[currIndex + 1].className = "";
@@ -75,7 +78,7 @@ const rightCar = () => {
   carouselItems[currIndex].className = "";
   carouselItems[currIndex - 1].className = "";
   carouselItems[currIndex].classList.add("placeRight");
-  carouselItems[currIndex - 1].classList.add("placeCenter");
+  carouselItems[currIndex - 1].classList.add("leftToCenter");
   carouselTitle.innerText = carouselTitles[currIndex - 1];
 
   currIndex--;
@@ -93,7 +96,9 @@ const rightCar = () => {
 const leftCar = () => {
   if (currIndex + 1 >= carouselItems.length) return;
   rightArrow.classList.remove("hide");
-
+  clearInterval(interval);
+  startInterval();
+  
   if (currIndex - 1 >= 0) {
     carouselItems[currIndex - 1].className = "";
     carouselItems[currIndex - 1].classList.add("hide");
@@ -104,7 +109,7 @@ const leftCar = () => {
 
   carouselTitle.innerText = carouselTitles[currIndex + 1];
   carouselItems[currIndex + 1].className = "";
-  carouselItems[currIndex + 1].classList.add("placeCenter");
+  carouselItems[currIndex + 1].classList.add("rightToCenter");
 
   currIndex++;
   const label = document.getElementById("car" + currIndex);
@@ -156,9 +161,11 @@ const updateCarousel = () => {
   leftCar();
 }
 
-setInterval(function() {
-  updateCarousel();
-}, 6000);
+const startInterval = () => {
+  interval = setInterval(updateCarousel, 6000);
+}
+
+startInterval();
 
 const copyMail = (evt) => {
   const targetClass = evt.currentTarget.firstElementChild.classList;
