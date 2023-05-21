@@ -3,17 +3,11 @@ html {
    font-family: 'Roboto', sans-serif;
 }
 
-#pageContent::before {
-   content: "";
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/3664b713470649.5627a17fd5d0f.jpg");
+/* #pageContent {
+   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,0.03)), to(rgba(0,0,0,0.03))),url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/3664b713470649.5627a17fd5d0f.jpg");
+   background-image: linear-gradient(to right bottom, rgba(0,0,0,0.003), rgba(0,0,0,0.003)),url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/3664b713470649.5627a17fd5d0f.jpg");
    background-size: cover;
-   opacity: 0.05;
-}
+} */
 
 section {
    margin-bottom: 5rem;
